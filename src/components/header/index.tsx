@@ -10,7 +10,11 @@ export default function Header({ Color }: { Color: string }) {
     const ChangeSize = (): void => setNavbarSize(prevstate => !prevstate);
     /*------------------------*/
     useEffect(() => {
-        NavbarSize ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible'
+        if (NavbarSize) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'visible'
+        }
     }, [NavbarSize])
     /*-------------*/
     useEffect(() => {
