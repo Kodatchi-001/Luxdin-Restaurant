@@ -7,3 +7,26 @@
     padding: 0;
     scroll-behavior: smooth;
 }
+
+body {
+    background-color: #ffff;
+}
+
+p {
+    color: #6e5959;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/*HomePage*/
+h1,
+button {
+    font-family: 'Zodiak', serif;
+}
+
+.background-image-size {
+    background-size: cover;
+    background-position: center;
+}
