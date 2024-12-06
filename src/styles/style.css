@@ -30,3 +30,17 @@ button {
     background-size: cover;
     background-position: center;
 }
+
+.card-visible {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+    margin-top: 0;
+}
+
+.card-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    margin-top: -1vh;
+}

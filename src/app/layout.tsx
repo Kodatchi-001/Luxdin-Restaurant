@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "../styles/style.css";
 import Header from "@/components/header";
+import NavbarDetails from "@/components/navbar-details";
+import ShareProvider from "@/share";
 
 export const metadata: Metadata = {
   title: "Luxdin || Luxdin-Restaurant",
@@ -19,8 +21,11 @@ export default function RootLayout({
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
       </head>
       <body>
-        <Header Color={'black'} />
-        {children}
+        <ShareProvider>
+          <Header Color={'black'} />
+          <NavbarDetails />
+          {children}
+        </ShareProvider>
       </body>
     </html>
   );

@@ -1,13 +1,16 @@
 'use client'
 
+import { Shareinfo } from "@/share";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export default function Header({ Color }: { Color: string }) {
     const [NavbarSize, setNavbarSize] = useState<boolean>(false);
-    const [ChangeColor, setChangeColor] = useState<string>('')
+    const [ChangeColor, setChangeColor] = useState<string>('');
+    const { HoverNavbar, setHoverNavbar } = useContext(Shareinfo);
+    console.log(HoverNavbar)
     /*------------------------*/
-    const ChangeSize = (): void => setNavbarSize(prevstate => !prevstate);
+    const ChangeSize = (): void => setNavbarSize((prevstate) => !prevstate);
     /*------------------------*/
     useEffect(() => {
         if (NavbarSize) {
@@ -52,16 +55,17 @@ export default function Header({ Color }: { Color: string }) {
     }, [ChangeColor]);
     return (
         <>
-            <header className={`w-full px-6 xl:px-20 2xl:px-96 pb-6 lg:py-6 2xl:py-10 ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''} xl:shadow-none z-50 overflow-hidden flex justify-between flex-wrap absolute xl:relative`}>
+            <header className={`w-full px-6 xl:px-20 pb-6 lg:py-6 ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''} xl:shadow-none z-50 overflow-hidden flex justify-between flex-wrap absolute xl:relative`}
+                onMouseLeave={() => setHoverNavbar?.(false)}>
                 <div className="w-full xl:w-4/6 2xl:w-auto lg:h-[10vh] xl:h-full flex py-6 lg:py-0">
                     <div className="w-1/2 lg:w-full h-full flex items-center gap-12">
-                        <Link href="/">
+                        <Link href="/" onClick={() => setHoverNavbar?.(false)}>
                             <h1 className="text-2xl text-[#d1a374] font-bold cursor-pointer">LuxDin</h1>
                         </Link>
                         <ul className={`w-[45%] 2xl:w-auto xl:flex justify-around 2xl:gap-10 text-lg hidden text-${Color}`}>
-                            <li className="h-full flex items-center gap-1 cursor-pointer Links">
+                            <li className="h-full flex items-center gap-1 cursor-pointer Links" onMouseOver={() => setHoverNavbar?.(true)}>
                                 Inner Pages
-                                <i className={`bx bx-chevron-down duration-500 text-gray-400 text-xl mt-1`}></i>
+                                <i className={`bx bx-chevron-down duration-500 ${HoverNavbar === true ? '-rotate-180' : 'rotate-0'} text-xl mt-1`}></i>
                             </li>
                             <Link href="/Services" className={`${ChangeColor === 'Services' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Services</Link>
                             <Link href="/Team" className={`${ChangeColor === 'Team' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Team</Link>
