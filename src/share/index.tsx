@@ -1,17 +1,12 @@
 'use client'
 
-import { createContext, Dispatch, SetStateAction, ReactNode, useState } from "react";
-
-interface ShareinfoType {
-    HoverNavbar: boolean | null;
-    setHoverNavbar: Dispatch<SetStateAction<boolean | null>> | null;
-}
+import { ShareinfoType } from "@/types";
+import { createContext, ReactNode, useState } from "react";
 
 const defaultValue: ShareinfoType = {
     HoverNavbar: null,
     setHoverNavbar: null
 };
-
 
 export const Shareinfo = createContext<ShareinfoType>(defaultValue);
 
