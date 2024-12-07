@@ -1,6 +1,7 @@
 import AboutHome from "@/components/home/about";
 import CategoriesHome from "@/components/home/categories";
 import Hero from "@/components/home/hero";
+import QuestionsHome from "@/components/home/questions";
 import ReservationHome from "@/components/home/reservation";
 import ServicesHome from "@/components/home/services";
 import SignaturesHome from "@/components/home/signatures";
@@ -15,5 +16,6 @@ export default function Home() {
         <TestimonialsHome />
         <ServicesHome />
         <ReservationHome />
+        <QuestionsHome />
     </>
 }
