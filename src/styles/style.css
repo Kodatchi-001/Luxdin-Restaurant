@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -45,10 +45,61 @@ button {
     margin-top: -1vh;
 }
 
+/*HomePage*/
 #bg-image {
     background-image: url(https://framerusercontent.com/images/p5MZcfDDpPXH4ljOapQxGmZM.png);
 }
 
 #bg-image-2 {
     background-image: url(https://framerusercontent.com/images/05y2WVxmuPb3Jen5ob8bTJJd1U.png?scale-down-to=1024);
+}
+
+@media (min-width : 1024px) {
+
+    #plat-restaurant-1 h1,
+    #plat-restaurant-2 h1,
+    #plat-restaurant-3 h1,
+    #plat-restaurant-4 h1 {
+        visibility: hidden;
+    }
+}
+
+#plat-restaurant-1 {
+    background-image: url(https://framerusercontent.com/images/ee7fjutP6PsmN7UxSbsrzxZYa4.png?scale-down-to=1024);
+}
+
+#plat-restaurant-1:hover {
+    h1 {
+        visibility: visible;
+    }
+}
+
+#plat-restaurant-2 {
+    background-image: url(https://framerusercontent.com/images/4EGMregKgEVLvu22vBk5WDIpCR4.png?scale-down-to=1024);
+}
+
+#plat-restaurant-2:hover {
+    h1 {
+        visibility: visible;
+    }
+}
+
+#plat-restaurant-3 {
+    background-image: url(https://framerusercontent.com/images/nd9SaHk77asr5pFhDTXQixMg8k.png?scale-down-to=1024);
+}
+
+#plat-restaurant-3:hover {
+    h1 {
+        visibility: visible;
+    }
+}
+
+#plat-restaurant-4 {
+    background-image: url(https://framerusercontent.com/images/9MT1hXJli4Bx7MCDpsL33LleOq8.png?scale-down-to=1024);
+}
+
+#plat-restaurant-4:hover {
+    h1 {
+        visibility: visible;
+    }
 }

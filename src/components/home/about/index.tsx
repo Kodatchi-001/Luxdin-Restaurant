@@ -1,4 +1,4 @@
-export default function AboutHomepage() {
+export default function AboutHome() {
     return <>
         <section className="w-full mt-5 lg:mt-24 lg:mb-24 flex flex-wrap-reverse lg:flex-nowrap lg:px-6 xl:px-20 gap-8 sm:gap-10 lg:gap-3">
             <div className="w-full lg:w-[35%] h-full flex justify-center items-center lg:px-8 xl:px-14 2xl:px-[68px] lg:py-4">
