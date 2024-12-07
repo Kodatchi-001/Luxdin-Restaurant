@@ -6,7 +6,6 @@ import { Autoplay } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import 'swiper/css';
 
-
 export default function TestimonialsHome() {
     const [cardactive, setcardactive] = useState(0);
     // Ensure you import Swiper types
