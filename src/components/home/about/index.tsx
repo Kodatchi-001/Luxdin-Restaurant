@@ -1,8 +1,8 @@
 export default function AboutHome() {
     return <>
         <section className="w-full mt-5 lg:mt-24 lg:mb-24 flex flex-wrap-reverse lg:flex-nowrap lg:px-6 xl:px-20 gap-8 sm:gap-10 lg:gap-3">
-            <div className="w-full lg:w-[35%] h-full flex justify-center items-center lg:px-8 xl:px-14 2xl:px-[68px] lg:py-4">
-                <div className="w-full lg:w-[95%] xl:w-full 2xl:block object-cover object-center hidden lg:flex lg:h-[40rem] rounded-full 2xl:rounded-full background-image-size" id="bg-image-2"></div>
+            <div className="w-full lg:w-[35%] h-full flex justify-center items-center lg:px-8 xl:px-14 2xl:px-8 lg:py-4">
+                <div className="w-full lg:w-[95%] xl:w-full 2xl:w-5/6 object-cover object-center hidden lg:flex lg:h-[40rem] rounded-full 2xl:rounded-full background-image-size" id="bg-image-2"></div>
             </div>
             <div className="w-full lg:w-[65%] h-full pl-2 lg:px-5 xl:px-12 flex flex-wrap py-4 gap-10 sm:gap-14 lg:gap-0">
                 <div className="w-full h-4/6 lg:pt-20 lg:pb-14 flex flex-col justify-between gap-5 xl:gap-10">

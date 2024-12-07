@@ -17,7 +17,7 @@ p {
 }
 
 ::-webkit-scrollbar {
-    width: 10px; 
+    width: 10px;
     background-color: #fbf8f4;
 }
 
@@ -153,10 +153,15 @@ button {
     background-image: url(https://framerusercontent.com/images/4HOLq4U5SwiElM2msfEHQOGaTE.png);
 }
 
+.cards-services:hover {
+    filter: grayscale(50%);
+    margin-top: -8vh;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.251);
+}
+
 #reservation-bg {
     background-image: url(https://framerusercontent.com/images/JrA5GzXMmFmrGrUI7IsOV6bN5E.png?scale-down-to=1024);
 }
-
 
 @media (min-width : 1024px) {
     .cards-FAQ:hover {
