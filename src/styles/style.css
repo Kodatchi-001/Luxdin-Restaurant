@@ -103,3 +103,21 @@ button {
         visibility: visible;
     }
 }
+
+#signatures {
+    background-image: url(https://framerusercontent.com/images/kW8k5GNy3lZZfPaDglgWfoZmM.png?scale-down-to=1024);
+}
+
+.cards-Homepage {
+    transition-duration: 300ms;
+    border-bottom: 1px solid black;
+}
+
+.cards-Homepage:hover {
+    border-bottom: 2px solid black;
+
+    h1,
+    h2 {
+        color: #d1a374;
+    }
+}
