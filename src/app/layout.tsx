@@ -19,6 +19,7 @@ export default function RootLayout({
       <head>
         <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400&=swdisplayap" rel="stylesheet" />
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
+        <link rel="icon" href="/mandala.ico" />
       </head>
       <body>
         <ShareProvider>

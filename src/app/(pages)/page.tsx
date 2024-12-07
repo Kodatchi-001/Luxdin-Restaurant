@@ -1,4 +1,5 @@
 import AboutHome from "@/components/home/about";
+import BlogHome from "@/components/home/blog";
 import CategoriesHome from "@/components/home/categories";
 import Hero from "@/components/home/hero";
 import QuestionsHome from "@/components/home/questions";
@@ -17,5 +18,6 @@ export default function Home() {
         <ServicesHome />
         <ReservationHome />
         <QuestionsHome />
+        <BlogHome />
     </>
 }
