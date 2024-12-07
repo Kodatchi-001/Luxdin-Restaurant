@@ -17,8 +17,15 @@ p {
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 10px; 
+    background-color: #fbf8f4;
 }
+
+::-webkit-scrollbar-thumb {
+    background-color: #d1a374;
+    border-radius: 4px;
+}
+
 
 /*HomePage*/
 h1,
