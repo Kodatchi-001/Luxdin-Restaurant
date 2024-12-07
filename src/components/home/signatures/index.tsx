@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SignaturesHome() {
     return <>
-        <section className="w-full mt-12 lg:mt-24 xl:mt-20 px-4 xl:px-20 flex flex-wrap gap-6">
+        <section className="w-full mt-12 lg:mt-24 xl:mt-16 px-4 xl:px-20 flex flex-wrap gap-6">
             <div className="w-full lg:h-[25vh] flex justify-between items-end flex-wrap lg:pb-8 gap-6 lg:gap-0">
                 <div className="w-full sm:w-auto flex flex-col justify-center gap-3 lg:gap-5">
                     <h2 className="text-xl text-[#d1a374]">SIGNATURES</h2>

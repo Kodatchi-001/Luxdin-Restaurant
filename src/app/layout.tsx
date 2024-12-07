@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../styles/style.css";
 import Header from "@/components/header";
 import NavbarDetails from "@/components/navbar-details";
-import ShareProvider from "@/share";
+import ShareProvider from "@/context";
 
 export const metadata: Metadata = {
   title: "LuxDin || Luxdin-Restaurant",

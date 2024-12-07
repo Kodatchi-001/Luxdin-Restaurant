@@ -1,6 +1,6 @@
 'use client'
 
-import { Shareinfo } from "@/share";
+import { Shareinfo } from "@/context";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 
