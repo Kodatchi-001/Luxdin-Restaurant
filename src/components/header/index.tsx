@@ -65,7 +65,7 @@ export default function Header({ Color }: { Color: string }) {
                         <ul className={`w-[45%] 2xl:w-auto xl:flex justify-around 2xl:gap-10 text-lg hidden text-${Color}`}>
                             <li className="h-full flex items-center gap-1 cursor-pointer Links" onMouseOver={() => setHoverNavbar?.(true)}>
                                 Inner Pages
-                                <i className={`bx bx-chevron-down duration-500 ${HoverNavbar === true ? '-rotate-180' : 'rotate-0'} text-xl mt-1`}></i>
+                                <i className={`bx bx-chevron-down duration-500 ${HoverNavbar === true ? '-rotate-180' : 'rotate-0'} text-gray-400 text-xl mt-1`}></i>
                             </li>
                             <Link href="/Services" className={`${ChangeColor === 'Services' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Services</Link>
                             <Link href="/Team" className={`${ChangeColor === 'Team' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Team</Link>
@@ -101,17 +101,18 @@ export default function Header({ Color }: { Color: string }) {
                         <Link href="/Sign-Up" className="px-6 py-2 text-white rounded-full bg-[#d1a374] border border-[#d1a374] text-[22px]">Sign Up</Link>
                     </div>
                 </div>
-                <div className={`w-2/6 2xl:w-auto h-full xl:flex gap-12 justify-end items-center text-md hidden text-${Color}`}>
+                <div className={`w-2/6 2xl:w-auto h-full xl:flex gap-8 justify-end items-center text-md hidden text-${Color}`}>
                     <div className="h-full flex justify-start items-center gap-2 pl-2">
                         <i className='bx bxs-phone-call text-xl text-[#c17d00]'></i>
                         <h2>+123 456 7890</h2>
                     </div>
-                    <div className="h-[40%] px-[0.2px] bg-[#d1a374]"></div>
-                    <h1>
+                    <div className="py-3 px-[0.2px] bg-[#d1a374]"></div>
+                    <Link href="/">
                         Book Table
-                    </h1>
+                    </Link>
                 </div>
             </header>
+            <div className="h-[8vh] sm:py-8 sm:h-auto xl:hidden"></div>
         </>
     );
 }

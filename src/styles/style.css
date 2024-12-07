@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #ffff;
+    background-color: #fbf8f4;
 }
 
 p {
@@ -43,4 +43,12 @@ button {
     opacity: 0;
     transform: scale(0.9);
     margin-top: -1vh;
+}
+
+#bg-image {
+    background-image: url(https://framerusercontent.com/images/p5MZcfDDpPXH4ljOapQxGmZM.png);
+}
+
+#bg-image-2 {
+    background-image: url(https://framerusercontent.com/images/05y2WVxmuPb3Jen5ob8bTJJd1U.png?scale-down-to=1024);
 }
