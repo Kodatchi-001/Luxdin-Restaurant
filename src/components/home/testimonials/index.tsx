@@ -6,11 +6,11 @@ import { Autoplay } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import 'swiper/css';
 
-// Ensure you import Swiper types
-SwiperCore.use([Autoplay]);
 
 export default function TestimonialsHome() {
     const [cardactive, setcardactive] = useState(0);
+    // Ensure you import Swiper types
+    SwiperCore.use([Autoplay]);
     const handelslide = (slide: SwiperCore) => setcardactive(slide.activeIndex);
 
     return <>
