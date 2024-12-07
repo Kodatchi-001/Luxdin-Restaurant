@@ -18,8 +18,7 @@ export default function Hero() {
                     </Link>
                 </div>
             </div>
-            <div
-                className="w-full h-[62vh] xl:h-[80vh] 2xl:h-[50vh] background-image-size" id="bg-image">
+            <div className="w-full h-[62vh] xl:h-[80vh] background-image-size" id="bg-image">
             </div>
         </section>
     </>
