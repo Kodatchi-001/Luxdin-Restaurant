@@ -224,3 +224,62 @@ button {
 #bg-section-5 {
     background-image: url(https://framerusercontent.com/images/4xS8Lw7NNykaFlfAcHNwZZdGag.png?scale-down-to=1024);
 }
+
+/*Menu*/
+@media (max-width :1023px) {
+    .card-menu {
+        .background-image-size {
+            scale: 1.1;
+        }
+
+        .card-menu-info {
+            h2 {
+                color: white;
+            }
+
+            h1 {
+                color: #d3a574;
+            }
+
+            p {
+                color: white;
+            }
+
+            div:last-child {
+                background-color: #d1a374;
+            }
+
+            background-color: #132d2d;
+        }
+    }
+
+}
+
+@media (min-width :1024px) {
+    .card-menu:hover {
+        .background-image-size {
+            scale: 1.1;
+        }
+
+        .card-menu-info {
+            h2 {
+                color: white;
+            }
+
+            h1 {
+                color: #d3a574;
+            }
+
+            p {
+                color: white;
+            }
+
+            div:last-child {
+                background-color: #d1a374;
+            }
+
+            background-color: #132d2d;
+        }
+    }
+
+}

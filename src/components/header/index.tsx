@@ -31,6 +31,7 @@ export default function Header() {
                 break;
             case '/menu':
                 setChangeColor('menu')
+                setColor('black');
                 break;
             case '/menu-details':
                 setChangeColor('menu-details')

@@ -6,7 +6,8 @@ export interface ShareinfoType {
     FAQ: FAQTypes[];
     BlogCards: BlogCardsTypes[],
     ValuesCards: ValuesCardsTypes[],
-    Teams: TeamsTypes[]
+    Teams: TeamsTypes[],
+    Menu: MenuTypes[]
 }
 
 export interface FAQTypes {
@@ -34,4 +35,19 @@ export interface TeamsTypes {
     Picture: string,
     Name: string,
     Job: string
+}
+
+export interface MenuTypes {
+    id?: number,
+    Categorie?: string,
+    Price?: number,
+    Tittle?: string,
+    Discription?: string,
+    Discription_2?: string,
+    Discription_3?: string[],
+    Discription_4?: string,
+    Picture?: string,
+    Picture_2?: string,
+    Picture_3?: string,
+    Picture_4?: string
 }
