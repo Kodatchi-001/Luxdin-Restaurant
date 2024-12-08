@@ -25,34 +25,37 @@ export default function Header({ Color }: { Color: string }) {
             case '/':
                 setChangeColor('HomePage')
                 break;
-            case '/About':
-                setChangeColor('About')
+            case '/about':
+                setChangeColor('about')
                 break;
-            case '/Menu':
-                setChangeColor('Menu')
+            case '/menu':
+                setChangeColor('menu')
                 break;
-            case '/Services':
-                setChangeColor('Services')
+            case '/menu-details':
+                setChangeColor('menu-details')
                 break;
-            case '/Team':
-                setChangeColor('Team')
+            case '/services':
+                setChangeColor('services')
                 break;
-            case '/Reservation':
-                setChangeColor('Reservation')
+            case '/team':
+                setChangeColor('team')
                 break;
-            case '/Points':
-                setChangeColor('Points')
+            case '/reservation':
+                setChangeColor('reservation')
                 break;
-            case '/Blog':
-                setChangeColor('Blog')
+            case '/blog':
+                setChangeColor('blog')
                 break;
-            case '/Contact':
-                setChangeColor('Contact')
+            case '/blog-details':
+                setChangeColor('blog-details')
+                break;
+            case '/contact':
+                setChangeColor('contact')
                 break;
             default:
                 setChangeColor('');
         }
-    }, [ChangeColor]);
+    }, [window.location.pathname])
     return (
         <>
             <header className={`w-full px-6 xl:px-20 2xl:px-[90px] pb-6 lg:py-6 ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''} xl:shadow-none z-50 overflow-hidden flex justify-between flex-wrap absolute xl:relative`}

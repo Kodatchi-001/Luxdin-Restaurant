@@ -15,37 +15,38 @@ export default function NavbarDetails() {
             case '/':
                 setChangeColor('HomePage')
                 break;
-            case '/About':
-                setChangeColor('About')
+            case '/about':
+                setChangeColor('about')
                 break;
-            case '/Menu':
-                setChangeColor('Menu')
+            case '/menu':
+                setChangeColor('menu')
                 break;
-            case '/Menu-Details':
-                setChangeColor('Menu-Details')
+            case '/menu-details':
+                setChangeColor('menu-details')
                 break;
-            case '/Services':
-                setChangeColor('Services')
+            case '/services':
+                setChangeColor('services')
                 break;
-            case '/Team':
-                setChangeColor('Team')
+            case '/team':
+                setChangeColor('team')
                 break;
-            case '/Reservation':
-                setChangeColor('Reservation')
+            case '/reservation':
+                setChangeColor('reservation')
                 break;
-            case '/Blog':
-                setChangeColor('Blog')
+            case '/blog':
+                setChangeColor('blog')
                 break;
-            case '/Blog-Details':
-                setChangeColor('Blog-Details')
+            case '/blog-details':
+                setChangeColor('blog-details')
                 break;
-            case '/Contact':
-                setChangeColor('Contact')
+            case '/contact':
+                setChangeColor('contact')
                 break;
             default:
                 setChangeColor('');
         }
-    }, [ChangeColor])
+    }, [window.location.pathname])
+
     return <>
         <div className="pl-24 absolute hidden lg:flex">
             <div className={`w-[40vw] 2xl:w-auto h-full ${HoverNavbar ? 'card-visible' : 'card-hidden'} duration-500 flex flex-col justify-between ml-28 pl-8 pt-6 pb-7 shadow-xl gap-5 2xl:gap-4 bg-[#fffdf8] border border-[#0000001d] z-50`}
