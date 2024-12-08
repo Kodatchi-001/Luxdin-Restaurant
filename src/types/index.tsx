@@ -5,7 +5,8 @@ export interface ShareinfoType {
     setHoverNavbar: Dispatch<SetStateAction<boolean | null>> | null;
     FAQ: FAQTypes[];
     BlogCards: BlogCardsTypes[],
-    ValuesCards: ValuesCardsTypes[]
+    ValuesCards: ValuesCardsTypes[],
+    Teams: TeamsTypes[]
 }
 
 export interface FAQTypes {
@@ -26,4 +27,11 @@ export interface ValuesCardsTypes {
     id: number,
     Tittle: string,
     Discription: string
+}
+
+export interface TeamsTypes {
+    id: number,
+    Picture: string,
+    Name: string,
+    Job: string
 }

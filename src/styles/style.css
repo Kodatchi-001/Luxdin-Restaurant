@@ -204,3 +204,23 @@ button {
 #bg-story {
     background-image: url(https://framerusercontent.com/images/fKSX06V9Z83OtShvIloc3UIwRc.png?scale-down-to=1024);
 }
+
+.card-team {
+    transition: 0.8s ease;
+}
+
+@media (min-width : 1024px) {
+    .card-team:hover {
+        .info-team {
+            display: flex;
+        }
+
+        .info-team-2 {
+            border-bottom: 2px solid black;
+        }
+    }
+}
+
+#bg-section-5 {
+    background-image: url(https://framerusercontent.com/images/4xS8Lw7NNykaFlfAcHNwZZdGag.png?scale-down-to=1024);
+}
