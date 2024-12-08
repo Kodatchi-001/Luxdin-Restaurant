@@ -48,7 +48,7 @@ export default function NavbarDetails() {
     }, [window.location.pathname])
 
     return <>
-        <div className="pl-24 absolute hidden lg:flex">
+        <div className="pl-24 absolute lg:mt-20 hidden lg:flex">
             <div className={`w-[40vw] 2xl:w-auto h-full ${HoverNavbar ? 'card-visible' : 'card-hidden'} duration-500 flex flex-col justify-between ml-28 pl-8 pt-6 pb-7 shadow-xl gap-5 2xl:gap-4 bg-[#fffdf8] border border-[#0000001d] z-50`}
                 onMouseLeave={HiddenNavbar} onMouseEnter={() => setHoverNavbar?.(true)}>
                 <h1 className="w-full text-[#d1a374]">INNER PAGES</h1>

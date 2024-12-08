@@ -2,9 +2,9 @@ import Achievements from "@/components/about/achievements";
 import Hero from "@/components/about/hero";
 import Milestones from "@/components/about/milestones";
 import Numbers from "@/components/about/numbers";
-import OurStory from "@/components/about/our-story/inde";
+import OurStory from "@/components/about/our-story";
 import Team from "@/components/about/team";
-import Values from "@/components/about/values/inde";
+import Values from "@/components/about/values";
 
 export default function About() {
     return <>

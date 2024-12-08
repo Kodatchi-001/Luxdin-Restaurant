@@ -17,7 +17,7 @@ export default function QuestionsHome() {
                     <h2 className="text-xl text-[#d1a374]">FAQ</h2>
                     <h1 className="text-3xl lg:text-6xl">Answers for Questions</h1>
                 </div>
-                <Link href="/" className="border border-[#d1a374] hover:bg-[#d1a374] hover:text-white duration-500 w-full text-center sm:w-auto px-10 py-3 lg:py-2 text-lg rounded-full text-[#d1a374]">
+                <Link href="/about" className="border border-[#d1a374] hover:bg-[#d1a374] hover:text-white duration-500 w-full text-center sm:w-auto px-10 py-3 lg:py-2 text-lg rounded-full text-[#d1a374]">
                     See About Us
                 </Link>
             </div>

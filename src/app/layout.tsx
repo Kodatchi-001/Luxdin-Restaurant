@@ -24,7 +24,7 @@ export default function RootLayout({
       </head>
       <body>
         <ShareProvider>
-          <Header Color={'black'} />
+          <Header />
           <NavbarDetails />
           {children}
           <Footer />
