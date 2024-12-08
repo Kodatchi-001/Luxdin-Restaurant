@@ -7,7 +7,9 @@ export interface ShareinfoType {
     BlogCards: BlogCardsTypes[],
     ValuesCards: ValuesCardsTypes[],
     Teams: TeamsTypes[],
-    Menu: MenuTypes[]
+    Menu: MenuTypes[],
+    ShareCategories: string | null,
+    setShareCategories: Dispatch<SetStateAction<string | null>>,
 }
 
 export interface FAQTypes {

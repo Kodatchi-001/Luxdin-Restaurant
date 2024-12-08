@@ -10,13 +10,16 @@ const defaultValue: ShareinfoType = {
     BlogCards: [],
     ValuesCards: [],
     Teams: [],
-    Menu: []
+    Menu: [],
+    ShareCategories: null,
+    setShareCategories: () => {}
 };
 
 export const Shareinfo = createContext<ShareinfoType>(defaultValue);
 
 export default function ShareProvider({ children }: { children: ReactNode }) {
     const [HoverNavbar, setHoverNavbar] = useState<boolean | null>(null);
+    const [ShareCategories, setShareCategories] = useState<string | null>('');
 
     const FAQ = [
         { id: 0, Tittle: 'How can I make a reservation?', Description: 'To make a reservation at LuxDin, you can either call our reservation hotline at +1 (555) 123-4567 or use our online booking system on our website. We recommend making reservations in advance to ensure availability.' },
@@ -195,7 +198,9 @@ export default function ShareProvider({ children }: { children: ReactNode }) {
         BlogCards,
         ValuesCards,
         Teams,
-        Menu
+        Menu,
+        ShareCategories,
+        setShareCategories
     }
     return (
         <Shareinfo.Provider value={Share}>

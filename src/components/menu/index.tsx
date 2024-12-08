@@ -7,13 +7,12 @@ import { useContext, useState } from "react";
 
 export default function MenuComponents() {
     const [Filter, setFilter] = useState("All");
-    const [ShareCategories, setShareCategories] = useState('')
-    const { Menu } = useContext(Shareinfo);
+    const { ShareCategories, setShareCategories, Menu } = useContext(Shareinfo);
     /*------------------------*/
     const FilterCards = (categorie: string): void => {
-        setFilter(categorie)
+        setFilter(categorie);
         setShareCategories('')
-    };
+    }
     return <>
         <div className="hidden lg:flex py-12"></div>
         <section className="w-full h-auto flex flex-wrap gap-14">
