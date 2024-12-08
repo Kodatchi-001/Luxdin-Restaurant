@@ -67,9 +67,9 @@ export default function Header({ Color }: { Color: string }) {
                                 Inner Pages
                                 <i className={`bx bx-chevron-down duration-500 ${HoverNavbar === true ? '-rotate-180' : 'rotate-0'} text-gray-400 text-xl mt-1`}></i>
                             </li>
-                            <Link href="/Services" className={`${ChangeColor === 'Services' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Services</Link>
-                            <Link href="/Team" className={`${ChangeColor === 'Team' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Team</Link>
-                            <Link href="/Blog" className={`${ChangeColor === 'Blog' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Blog</Link>
+                            <Link href="/Services" className={`${ChangeColor === 'services' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Services</Link>
+                            <Link href="/Team" className={`${ChangeColor === 'team' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Team</Link>
+                            <Link href="/Blog" className={`${ChangeColor === 'blog' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Blog</Link>
                         </ul>
                     </div>
                     <div className="w-1/2 h-full flex justify-end items-center xl:hidden">
@@ -83,13 +83,13 @@ export default function Header({ Color }: { Color: string }) {
                     <div className="w-full h-1/2 flex flex-col gap-5">
                         <h1 className="w-full text-center text-[#c17d00] text-xl">INNER PAGES</h1>
                         <div className="text-xl lg:text-2xl bg-red-700w flex justify-between items-center flex-wrap pt-2 text-gray-600">
-                            <Link href="/About" className={`w-1/3 text-center ${ChangeColor === 'About' ? 'text-[#a46c32]' : ''}`}>About</Link>
-                            <Link href="/Menu" className={`w-1/3 text-center ${ChangeColor === 'Menu' ? 'text-[#a46c32]' : ''}`}>Menu</Link>
-                            <Link href="/Services" className={`w-1/3 text-center ${ChangeColor === 'Services' ? 'text-[#a46c32]' : ''}`}>Services</Link>
-                            <Link href="/Team" className={`w-1/3 text-center mt-3 ${ChangeColor === 'Team' ? 'text-[#a46c32]' : ''}`}>Team</Link>
-                            <Link href="/Contact" className={`w-1/3 text-center mt-3 ${ChangeColor === 'Contact' ? 'text-[#a46c32]' : ''}`}>Contact</Link>
-                            <Link href="/Blog" className={`w-1/3 text-center mt-3 ${ChangeColor === 'Blog' ? 'text-[#a46c32]' : ''}`}>Blog</Link>
-                            <Link href="/Reservation" className={`w-1/3 flex justify-center ${ChangeColor === 'Reservation' ? 'text-[#a46c32]' : ''}`}>Reservation</Link>
+                            <Link href="/about" className={`w-1/3 text-center ${ChangeColor === 'about' ? 'text-[#a46c32]' : ''}`}>About</Link>
+                            <Link href="/menu" className={`w-1/3 text-center ${ChangeColor === 'menu' ? 'text-[#a46c32]' : ''}`}>Menu</Link>
+                            <Link href="/services" className={`w-1/3 text-center ${ChangeColor === 'services' ? 'text-[#a46c32]' : ''}`}>Services</Link>
+                            <Link href="/team" className={`w-1/3 text-center mt-3 ${ChangeColor === 'team' ? 'text-[#a46c32]' : ''}`}>Team</Link>
+                            <Link href="/contact" className={`w-1/3 text-center mt-3 ${ChangeColor === 'contact' ? 'text-[#a46c32]' : ''}`}>Contact</Link>
+                            <Link href="/blog" className={`w-1/3 text-center mt-3 ${ChangeColor === 'blog' ? 'text-[#a46c32]' : ''}`}>Blog</Link>
+                            <Link href="/reservation" className={`w-1/3 flex justify-center ${ChangeColor === 'reservation' ? 'text-[#a46c32]' : ''}`}>Reservation</Link>
                         </div>
                     </div>
                     <div className="w-full h-1/2 flex justify-between sm:justify-center items-center pt-8 px-2 sm:gap-14">

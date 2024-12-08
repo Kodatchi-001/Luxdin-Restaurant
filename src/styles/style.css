@@ -195,3 +195,8 @@ button {
     transform: scale(0.9);
     margin-top: -1vh;
 }
+
+/*About*/
+#bg-about {
+    background-image: url(https://framerusercontent.com/images/Oadk1Vakv4zm3UEysGMoRVqlCRQ.png?scale-down-to=1024);
+}
