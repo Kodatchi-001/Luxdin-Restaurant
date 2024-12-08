@@ -1,5 +1,6 @@
 import Achievements from "@/components/about/achievements";
 import Hero from "@/components/about/hero";
+import Milestones from "@/components/about/milestones";
 import Numbers from "@/components/about/numbers";
 import OurStory from "@/components/about/our-story/inde";
 import Team from "@/components/about/team";
@@ -13,5 +14,6 @@ export default function About() {
         <Team />
         <Numbers />
         <Achievements />
+        <Milestones />
     </>
 }
