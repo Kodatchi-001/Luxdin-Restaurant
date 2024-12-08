@@ -7,7 +7,8 @@ const defaultValue: ShareinfoType = {
     HoverNavbar: null,
     setHoverNavbar: null,
     FAQ: [],
-    BlogCards: []
+    BlogCards: [],
+    ValuesCards: []
 };
 
 export const Shareinfo = createContext<ShareinfoType>(defaultValue);
@@ -30,10 +31,18 @@ export default function ShareProvider({ children }: { children: ReactNode }) {
         { id: 4, Picture: 'https://framerusercontent.com/images/ZICgs8EkhSFVk5Fj17KO9SICGRM.png', Tittle: 'Mastering the Perfect Dessert: Tips and Techniques from LuxDins Pastry Chefs', Person: 'Michael Smith', Date: '21 APRIL 2024' }
     ]
 
+    const ValuesCards = [
+        { id: 0, Tittle: 'Innovation', Discription: 'LuxeDin is committed to delivering excellence in every aspect, from food culinary creations to service, ensuring an unforgettable dining.' },
+        { id: 1, Tittle: 'Elegance', Discription: 'With a sophisticated ambiance and meticulous details exuding elegance, elevating dining to a luxurious affair that resonates with refinement.' },
+        { id: 2, Tittle: 'Sustainability', Discription: 'We prioritize sustainability by sourcing ingre-dients responsibly and minimize environmental impact, ensuring that each dish is ethical.' },
+        { id: 3, Tittle: 'Hospitality', Discription: 'Our dedicated team goes above and beyond to ensure every guest feels welcomed and heart cherished throughout their dining journey.' }
+    ]
+
     const Share = {
         HoverNavbar, setHoverNavbar,
         FAQ,
-        BlogCards
+        BlogCards,
+        ValuesCards
     }
     return (
         <Shareinfo.Provider value={Share}>

@@ -4,7 +4,8 @@ export interface ShareinfoType {
     HoverNavbar: boolean | null;
     setHoverNavbar: Dispatch<SetStateAction<boolean | null>> | null;
     FAQ: FAQTypes[];
-    BlogCards: BlogCardsTypes[]
+    BlogCards: BlogCardsTypes[],
+    ValuesCards: ValuesCardsTypes[]
 }
 
 export interface FAQTypes {
@@ -19,4 +20,10 @@ export interface BlogCardsTypes {
     Tittle: string,
     Person: string,
     Date: string
+}
+
+export interface ValuesCardsTypes {
+    id: number,
+    Tittle: string,
+    Discription: string
 }
