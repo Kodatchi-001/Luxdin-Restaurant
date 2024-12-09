@@ -6,15 +6,14 @@ import Link from "next/link";
 import { useContext, useState } from "react";
 
 export default function MenuComponents() {
-    const [Filter, setFilter] = useState("All");
+    const [Filter, setFilter] = useState<string>("All");
     const { ShareCategories, setShareCategories, Menu } = useContext(Shareinfo);
-    /*------------------------*/
     const FilterCards = (categorie: string): void => {
         setFilter(categorie);
         setShareCategories('')
     }
     return <>
-        <div className="hidden lg:flex py-12"></div>
+        <div className="hidden lg:flex py-8"></div>
         <section className="w-full h-auto flex flex-wrap gap-14">
             <div className="w-full lg:h-[45vh] flex flex-col justify-center lg:pt-14 gap-20 items-center text-4xl lg:text-7xl">
                 <div>
@@ -50,7 +49,7 @@ export default function MenuComponents() {
             </div>
             <div className="w-full h-auto flex justify-center items-center flex-wrap gap-3 xl:gap-8 px-3 xl:px-20">
                 {Menu.filter((item: MenuTypes) => ShareCategories === '' ? Filter === "All" || item.Categorie === Filter : item.Categorie === ShareCategories).map(items => (
-                    <Link href="/" key={items.id} className="w-full sm:w-[48%] lg:w-[30%] lg:h-[78vh] cursor-pointer card-menu">
+                    <Link href={`/menu/${items.Tittle?.replace(/ /g, '-').replace(/&/g, 'And')}`} key={items.id} className="w-full sm:w-[48%] lg:w-[30%] lg:h-[78vh] cursor-pointer card-menu">
                         <div className="w-full h-[35vh] lg:h-[55%] relative overflow-hidden">
                             <div className="w-full h-full background-image-size absolute duration-300" style={{ backgroundImage: `url(${items.Picture})` }}></div>
                         </div>

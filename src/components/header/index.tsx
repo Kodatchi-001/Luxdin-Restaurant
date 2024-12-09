@@ -8,7 +8,7 @@ export default function Header() {
     const [NavbarSize, setNavbarSize] = useState<boolean>(false);
     const [ChangeColor, setChangeColor] = useState<string>('');
     const { HoverNavbar, setHoverNavbar } = useContext(Shareinfo);
-    const [Color, setColor] = useState<string>('white')
+    const [Color, setColor] = useState<string>('black')
     /*------------------------*/
     const ChangeSize = (): void => setNavbarSize((prevstate: boolean) => !prevstate);
     /*------------------------*/
@@ -24,16 +24,15 @@ export default function Header() {
         switch (window.location.pathname) {
             case '/':
                 setChangeColor('HomePage')
-                setColor('black');
                 break;
             case '/about':
                 setChangeColor('about')
+                setColor('white');
                 break;
             case '/menu':
                 setChangeColor('menu')
-                setColor('black');
                 break;
-            case '/menu-details':
+            case '/menu/':
                 setChangeColor('menu-details')
                 break;
             case '/services':
@@ -71,9 +70,9 @@ export default function Header() {
                             Inner Pages
                             <i className={`bx bx-chevron-down duration-500 ${HoverNavbar === true ? '-rotate-180' : 'rotate-0'} text-gray-400 text-xl mt-1`}></i>
                         </li>
-                        <Link href="/Services" className={`${ChangeColor === 'services' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Services</Link>
-                        <Link href="/Team" className={`${ChangeColor === 'team' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Team</Link>
-                        <Link href="/Blog" className={`${ChangeColor === 'blog' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Blog</Link>
+                        <Link href="/services" className={`${ChangeColor === 'services' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Services</Link>
+                        <Link href="/team" className={`${ChangeColor === 'team' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Team</Link>
+                        <Link href="/blog" className={`${ChangeColor === 'blog' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`}>Blog</Link>
                     </ul>
                 </div>
                 <div className="w-1/2 h-full flex justify-end items-center xl:hidden">

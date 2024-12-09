@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 
 export default function NavbarDetails() {
-    const { HoverNavbar, setHoverNavbar } = useContext(Shareinfo);
+    const { HoverNavbar, setHoverNavbar, Menu } = useContext(Shareinfo);
     const [ChangeColor, setChangeColor] = useState('')
     /*---------------*/
-    const HiddenNavbar = ():void => setHoverNavbar?.(false)
+    const HiddenNavbar = (): void => setHoverNavbar?.(false)
     /*---------------*/
     useEffect(() => {
         switch (window.location.pathname) {
@@ -57,7 +57,7 @@ export default function NavbarDetails() {
                         <ul className="h-full flex flex-col justify-between text-lg gap-2 text-gray-600">
                             <Link href="/about" className={`${ChangeColor === 'about' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>About</Link>
                             <Link href="/menu" className={`${ChangeColor === 'menu' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Menu</Link>
-                            <Link href="/menu-details" className={`${ChangeColor === 'Menu-Details' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Menu Details</Link>
+                            <Link href={`/menu/${Menu[0].Tittle?.replace(/ /g, '-')}`} className={`${ChangeColor === 'Menu-Details' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Menu Details</Link>
                         </ul>
                     </div>
                     <div className="w-1/3 2xl:w-auto h-full flex items-center border-l border-r border-[#c17d00]">
