@@ -13,7 +13,7 @@ export default function Values() {
                 {ValuesCards.map((items: ValuesCardsTypes, index) => (
                     <div key={index} className="w-full sm:w-[48.5%] lg:w-[48%] h-[48.5%] bg-[#fffdf8] flex flex-col justify-between gap-8 lg:gap-0 p-7">
                         <div className="w-[10%]">
-                            <img src="../../../../public/images/mandala.png" alt="Mandala logo" />
+                            {/* <img src="../../../../public/images/mandala.png" alt="Mandala logo" /> */}
                         </div>
                         <div className="flex flex-col justify-between gap-3 lg:gap-4">
                             <h1 className="text-xl font-bold">{items.Tittle}</h1>

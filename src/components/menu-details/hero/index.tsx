@@ -5,7 +5,7 @@ import { MenuTypes } from "@/types"
 import { useContext } from "react"
 
 export default function Hero({ Props }: { Props: { CardTittle: string } }) {
-    const { Menu } = useContext(Shareinfo)
+    const { Menu } = useContext(Shareinfo);
 
     return <>
         <div className="hidden lg:flex py-8"></div>

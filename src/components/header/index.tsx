@@ -8,7 +8,7 @@ export default function Header() {
     const [NavbarSize, setNavbarSize] = useState<boolean>(false);
     const [ChangeColor, setChangeColor] = useState<string>('');
     const { HoverNavbar, setHoverNavbar } = useContext(Shareinfo);
-    const [Color, setColor] = useState<string>('black')
+    const [Color, setColor] = useState<string>('black');
     /*------------------------*/
     const ChangeSize = (): void => setNavbarSize((prevstate: boolean) => !prevstate);
     /*------------------------*/
@@ -56,7 +56,7 @@ export default function Header() {
             default:
                 setChangeColor('');
         }
-    }, [window.location.pathname])
+    }, [])
     return <>
         <header className={`w-full px-6 xl:px-20 2xl:px-[90px] pb-6 lg:py-6 text-${Color} ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''} xl:shadow-none z-50 overflow-hidden flex justify-between items-center flex-wrap absolute`}
             onMouseLeave={() => setHoverNavbar?.(false)}>

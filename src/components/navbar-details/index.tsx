@@ -45,7 +45,7 @@ export default function NavbarDetails() {
             default:
                 setChangeColor('');
         }
-    }, [window.location.pathname])
+    }, [])
 
     return <>
         <div className="pl-24 absolute lg:mt-20 hidden lg:flex">
