@@ -1,5 +1,6 @@
 import Hero from "@/components/menu-details/hero";
 import MainCourse from "@/components/menu-details/main-course";
+import Others from "@/components/menu-details/others";
 import Testimonials from "@/components/menu-details/testimonials";
 import { ProductsTittleProps } from "@/types";
 
@@ -11,5 +12,6 @@ export default async function Products({ params }: ProductsTittleProps) {
         <Hero Props={{ CardTittle: Tittle }} />
         <MainCourse Props={{ CardTittle: Tittle }} />
         <Testimonials Props={{ CardTittle: Tittle }} />
+        <Others Props={{ CardTittle: Tittle }} />
     </>
 }
