@@ -51,7 +51,8 @@ export interface MenuTypes {
     Picture?: string,
     Picture_2?: string,
     Picture_3?: string,
-    Picture_4?: string
+    Picture_4?: string,
+    Picture_5?: string
 }
 
 export interface ProductsTittleProps {
