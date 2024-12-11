@@ -53,3 +53,15 @@ export interface MenuTypes {
     Picture_3?: string,
     Picture_4?: string
 }
+
+export interface ProductsTittleProps {
+    params: Promise<{
+        products: string;
+    }>
+}
+
+export interface PropsType {
+    Props: {
+        CardTittle: string
+    }
+}

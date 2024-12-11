@@ -1,14 +1,13 @@
 import Hero from "@/components/menu-details/hero";
-
-interface ProductsTittleProps {
-    params: Promise<{
-        products: string;
-    }>
-}
+import MainCourse from "@/components/menu-details/main-course";
+import { ProductsTittleProps } from "@/types";
 
 export default async function Products({ params }: ProductsTittleProps) {
     const { products } = await params
     const Tittle = products.replace(/-/g, ' ').replace(/And/g, '&');
-    
-    return <Hero Props={{ CardTittle: Tittle }} />
+
+    return <>
+        <Hero Props={{ CardTittle: Tittle }} />
+        <MainCourse Props={{ CardTittle: Tittle }} />
+    </>
 }

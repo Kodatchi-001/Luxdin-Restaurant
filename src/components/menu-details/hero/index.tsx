@@ -1,10 +1,10 @@
 'use client'
 
 import { Shareinfo } from "@/context"
-import { MenuTypes } from "@/types"
+import { MenuTypes, PropsType } from "@/types"
 import { useContext } from "react"
 
-export default function Hero({ Props }: { Props: { CardTittle: string } }) {
+export default function Hero({ Props }: PropsType) {
     const { Menu } = useContext(Shareinfo);
 
     return <>
