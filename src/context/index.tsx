@@ -12,7 +12,7 @@ const defaultValue: ShareinfoType = {
     Teams: [],
     Menu: [],
     ShareCategories: null,
-    setShareCategories: () => {}
+    setShareCategories: () => { }
 };
 
 export const Shareinfo = createContext<ShareinfoType>(defaultValue);

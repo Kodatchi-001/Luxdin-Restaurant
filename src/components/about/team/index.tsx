@@ -21,21 +21,24 @@ export default function Team() {
                         </button>
                     </div>
                 </div>
-                {Teams.slice(0, 5).map((items: TeamsTypes, index) => (
-                    <div key={index} className="w-full sm:w-[48%] xl:w-[32%] h-[50vh] lg:h-[65vh] card-team sm:mt-5 lg:mt-0">
-                        <div className="w-full h-[89%] flex items-end background-image-size" style={{ backgroundImage: `url(${items.Picture})` }}>
-                            <div className="w-full h-1/5 lg:h-full info-team flex lg:hidden justify-center items-center gap-10 text-xl font-bold text-white lg:bg-[#132d2d5e]">
-                                <h1 className="cursor-pointer">X</h1>
-                                <h1 className="cursor-pointer">IG</h1>
-                                <h1 className="cursor-pointer">FB</h1>
+                {Teams.length > 0 ?
+                    Teams.slice(0, 5).map((items: TeamsTypes, index) => (
+                        <div key={index} className="w-full sm:w-[48%] xl:w-[32%] h-[50vh] lg:h-[65vh] card-team sm:mt-5 lg:mt-0">
+                            <div className="w-full h-[89%] flex items-end background-image-size" style={{ backgroundImage: `url(${items.Picture})` }}>
+                                <div className="w-full h-1/5 lg:h-full info-team flex lg:hidden justify-center items-center gap-10 text-xl font-bold text-white lg:bg-[#132d2d5e]">
+                                    <h1 className="cursor-pointer">X</h1>
+                                    <h1 className="cursor-pointer">IG</h1>
+                                    <h1 className="cursor-pointer">FB</h1>
+                                </div>
+                            </div>
+                            <div className="w-full h-[11%] flex justify-between items-center info-team-2 border-b border-[#0000007e] text-[16px]">
+                                <h2 className="font-bold">{items.Name}</h2>
+                                <h2 className="text-gray-700">{items.Job}</h2>
                             </div>
                         </div>
-                        <div className="w-full h-[11%] flex justify-between items-center info-team-2 border-b border-[#0000007e] text-[16px]">
-                            <h2 className="font-bold">{items.Name}</h2>
-                            <h2 className="text-gray-700">{items.Job}</h2>
-                        </div>
-                    </div>
-                ))}
+                    )) : (
+                        <h1>!Sorry,we dont have any team</h1>
+                    )}
             </div>
         </section>
     </>

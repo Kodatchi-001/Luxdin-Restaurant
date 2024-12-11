@@ -12,17 +12,20 @@ export default function Values() {
     return <>
         <section className="w-full lg:h-[95vh] lg:mt-14 flex flex-wrap-reverse lg:flex-nowrap gap-14 lg:gap-0 px-5 py-10 lg:p-14 xl:p-24 bg-[#132d2d]">
             <div className="w-full lg:w-[70%] h-full flex flex-col sm:flex-row lg:flex-col justify-between flex-wrap gap-5 lg:gap-0">
-                {ValuesCards.map((items: ValuesCardsTypes, index) => (
-                    <div key={index} className="w-full sm:w-[48.5%] lg:w-[48%] h-[48.5%] bg-[#fffdf8] flex flex-col justify-between gap-8 lg:gap-0 p-7">
-                        <div className="w-[10%]">
-                            <Image src={Logo} alt="Mandala logo" />
+                {ValuesCards.length > 0 ?
+                    ValuesCards.map((items: ValuesCardsTypes, index) => (
+                        <div key={index} className="w-full sm:w-[48.5%] lg:w-[48%] h-[48.5%] bg-[#fffdf8] flex flex-col justify-between gap-8 lg:gap-0 p-7">
+                            <div className="w-[10%]">
+                                <Image src={Logo} alt="Mandala logo" />
+                            </div>
+                            <div className="flex flex-col justify-between gap-3 lg:gap-4">
+                                <h1 className="text-xl font-bold">{items.Tittle}</h1>
+                                <p className="text-[17px]">{items.Discription}</p>
+                            </div>
                         </div>
-                        <div className="flex flex-col justify-between gap-3 lg:gap-4">
-                            <h1 className="text-xl font-bold">{items.Tittle}</h1>
-                            <p className="text-[17px]">{items.Discription}</p>
-                        </div>
-                    </div>
-                ))}
+                    )) : (
+                        <h1>!Sorry,we dont have any values</h1>
+                    )}
             </div>
             <div className="w-full lg:w-[30%] h-full flex flex-col justify-between gap-3 lg:gap-0 lg:pl-10 xl:pl-14 text-white">
                 <h2 className="text-xl text-[#d1a374]">VALUES</h2>
