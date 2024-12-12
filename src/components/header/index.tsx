@@ -58,6 +58,7 @@ export default function Header() {
                 setChangeColor('');
         }
     }, [])
+    
     return <>
         <header className={`w-full px-6 xl:px-20 2xl:px-[90px] pb-6 lg:py-6 text-${Color} ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''} xl:shadow-none z-50 overflow-hidden flex justify-between items-center flex-wrap absolute`}
             onMouseLeave={() => setHoverNavbar?.(false)}>

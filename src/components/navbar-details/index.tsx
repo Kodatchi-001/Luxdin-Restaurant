@@ -62,16 +62,16 @@ export default function NavbarDetails() {
                     </div>
                     <div className="w-1/3 2xl:w-auto h-full flex items-center border-l border-r border-[#c17d00]">
                         <ul className="h-full flex flex-col justify-between px-8 text-lg gap-2 text-gray-600">
-                            <Link href="/services" className={`${ChangeColor === 'Services' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Services</Link>
-                            <Link href="/team" className={`${ChangeColor === 'Team' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Team</Link>
-                            <Link href="/reservation" className={`${ChangeColor === 'Reservation' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Reservation</Link>
+                            <Link href="/services" className={`${ChangeColor === 'services' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Services</Link>
+                            <Link href="/team" className={`${ChangeColor === 'team' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Team</Link>
+                            <Link href="/reservation" className={`${ChangeColor === 'reservation' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Reservation</Link>
                         </ul>
                     </div>
                     <div className="w-1/3 2xl:w-auto h-full flex items-center">
                         <ul className="h-full flex flex-col justify-between px-8 text-lg gap-2 text-gray-600">
-                            <Link href="/blog" className={`${ChangeColor === 'Blog' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Blog</Link>
-                            <Link href="/blog-details" className={`${ChangeColor === 'Blog-Details' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Blog-Details</Link>
-                            <Link href="/contact" className={`${ChangeColor === 'Contact' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Contact</Link>
+                            <Link href="/blog" className={`${ChangeColor === 'blog' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Blog</Link>
+                            <Link href="/blog-details" className={`${ChangeColor === 'blog-details' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Blog-Details</Link>
+                            <Link href="/contact" className={`${ChangeColor === 'contact' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Contact</Link>
                         </ul>
                     </div>
                 </div>

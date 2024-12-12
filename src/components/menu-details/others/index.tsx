@@ -16,7 +16,7 @@ export default function Others({ Props }: PropsType) {
 
     useEffect(() => {
         GetCategory()
-    }, [])
+    }, [Menu, Props.CardTittle])
 
     return <>
         <section className={`w-full lg:h-[90vh] flex flex-wrap px-2 lg:px-5 xl:px-20 mt-10 lg:mt-0 lg:py-14 ${Menu.filter((item: MenuTypes) => item.Categorie === ProductsCategory).length > 1 ? 'flex' : 'hidden'}`}>
@@ -30,9 +30,8 @@ export default function Others({ Props }: PropsType) {
                 </Link>
             </div>
             <div className="w-full h-[70%] flex items-center flex-wrap gap-2 lg:gap-5 py-2">
-                {Menu.length > 0 ?
-                    Menu
-                        .filter((item: MenuTypes) => item.Categorie === ProductsCategory && item.Tittle !== Props.CardTittle)
+                {Menu && Menu.length > 0 ?
+                    Menu.filter((item: MenuTypes) => item.Categorie === ProductsCategory && item.Tittle !== Props.CardTittle)
                         .map((item: MenuTypes) => (
                             <Link href={`/menu/${item.Tittle?.replace(/ /g, '-').replace(/&/g, 'And')}`} key={item.id} className="w-full sm:w-[45%] lg:w-[23%] h-[50vh] lg:h-full flex flex-wrap cursor-pointer hover:-mt-8 duration-500">
                                 <div className="w-full h-5/6 background-image-size" style={{ backgroundImage: `url(${item.Picture})` }}></div>

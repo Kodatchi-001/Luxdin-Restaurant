@@ -13,7 +13,7 @@ export default function MenuComponents() {
         setShareCategories('')
     }
     return <>
-        <div className="hidden lg:flex py-8"></div>
+        <div className="hidden lg:flex py-14"></div>
         <section className="w-full h-auto flex flex-wrap gap-14">
             <div className="w-full lg:h-[45vh] flex flex-col justify-center lg:pt-14 gap-20 items-center text-4xl lg:text-7xl">
                 <div>
