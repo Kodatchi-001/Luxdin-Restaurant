@@ -37,6 +37,7 @@ export default function Header() {
                 break;
             case '/services':
                 setChangeColor('services')
+                setColor('white');
                 break;
             case '/team':
                 setChangeColor('team')
