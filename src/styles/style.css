@@ -34,7 +34,6 @@ p {
     background-image: url(https://framerusercontent.com/images/MWRaMx4ZvNrOnXj1kH5SYEA5YGk.png?scale-down-to=1024);
 }
 
-/*HomePage*/
 h1,
 button {
     font-family: 'Zodiak', serif;
@@ -204,7 +203,6 @@ button {
 }
 
 /*About*/
-
 #bg-story {
     background-image: url(https://framerusercontent.com/images/fKSX06V9Z83OtShvIloc3UIwRc.png?scale-down-to=1024);
 }
@@ -289,7 +287,6 @@ button {
 }
 
 /*Services*/
-
 #bg-Services-2 {
     background-image: url(https://framerusercontent.com/images/MCB1MmnHBWNS4Qf8X0wu5dKFfGQ.png?scale-down-to=1024);
 }
@@ -304,4 +301,37 @@ button {
 
 #bg-Services-4-2 {
     background-image: url(https://framerusercontent.com/images/8EJ7uxASMKEBDFINnoVZrMtv8.png?scale-down-to=1024);
+}
+
+/*Blog*/
+.Blog-Card-1:hover {
+    div:last-child {
+        opacity: 1;
+    }
+}
+
+.Blog-Card-2:hover {
+    .Tittle-Blog-Cards {
+        color: #a46c32;
+    }
+
+    .Line-Blog-Cards{
+        width: 100%;
+        padding: auto;
+        background-color: #a46c32;
+    }
+
+    div:last-child {
+        opacity: 1;
+    }
+}
+
+/*Blog-Details*/
+.Cards-Blog-Details:hover{
+    .Cards-Blog-Details-Tittle{
+        color: #a46c32;
+    }
+
+    border-bottom: 1.9px solid black;
+
 }
