@@ -26,6 +26,13 @@ p {
     border-radius: 4px;
 }
 
+#bg-hero {
+    background-image: url(https://framerusercontent.com/images/Oadk1Vakv4zm3UEysGMoRVqlCRQ.png?scale-down-to=1024);
+}
+
+#bg-hero-2 {
+    background-image: url(https://framerusercontent.com/images/MWRaMx4ZvNrOnXj1kH5SYEA5YGk.png?scale-down-to=1024);
+}
 
 /*HomePage*/
 h1,
@@ -197,9 +204,6 @@ button {
 }
 
 /*About*/
-#bg-about {
-    background-image: url(https://framerusercontent.com/images/Oadk1Vakv4zm3UEysGMoRVqlCRQ.png?scale-down-to=1024);
-}
 
 #bg-story {
     background-image: url(https://framerusercontent.com/images/fKSX06V9Z83OtShvIloc3UIwRc.png?scale-down-to=1024);
@@ -285,9 +289,6 @@ button {
 }
 
 /*Services*/
-#bg-Services {
-    background-image: url(https://framerusercontent.com/images/MWRaMx4ZvNrOnXj1kH5SYEA5YGk.png?scale-down-to=1024);
-}
 
 #bg-Services-2 {
     background-image: url(https://framerusercontent.com/images/MCB1MmnHBWNS4Qf8X0wu5dKFfGQ.png?scale-down-to=1024);

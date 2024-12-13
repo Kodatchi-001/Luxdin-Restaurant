@@ -46,10 +46,12 @@ export default function Header() {
                 setChangeColor('reservation')
                 break;
             case '/blog':
-                setChangeColor('blog')
+                setChangeColor('blog');
+                setColor('white');
                 break;
             case '/blog-details':
-                setChangeColor('blog-details')
+                setChangeColor('blog-details');
+                setColor('white');
                 break;
             case '/contact':
                 setChangeColor('contact')

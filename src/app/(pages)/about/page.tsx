@@ -1,14 +1,14 @@
-import Achievements from "@/components/about/achievements";
-import Hero from "@/components/about/hero";
-import Milestones from "@/components/about/milestones";
-import Numbers from "@/components/about/numbers";
+import Hero from "@/components/hero";
 import OurStory from "@/components/about/our-story";
-import Team from "@/components/about/team";
 import Values from "@/components/about/values";
+import Team from "@/components/about/team";
+import Numbers from "@/components/about/numbers";
+import Achievements from "@/components/about/achievements";
+import Milestones from "@/components/about/milestones";
 
 export default function About() {
     return <>
-        <Hero />
+        <Hero FirstText="About" LastText="Our Restaurant" PictureId="bg-hero" />
         <OurStory />
         <Values />
         <Team />
