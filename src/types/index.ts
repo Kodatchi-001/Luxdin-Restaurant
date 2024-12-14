@@ -10,6 +10,7 @@ export interface ShareinfoType {
     Menu: MenuTypes[],
     ShareCategories: string | null,
     setShareCategories: Dispatch<SetStateAction<string | null>>,
+    BlogDetails: BlogDetailsTypes[]
 }
 
 export interface FAQTypes {
@@ -24,6 +25,15 @@ export interface BlogCardsTypes {
     Tittle: string,
     Person: string,
     Date: string
+}
+
+export interface BlogDetailsTypes {
+    id: number,
+    Tittle: string,
+    Description: string,
+    Picture: string,
+    Description_2: { Text: string }[],
+    Person: string
 }
 
 export interface ValuesCardsTypes {
@@ -61,8 +71,20 @@ export interface ProductsTittleProps {
     }>
 }
 
-export interface PropsType {
+export interface PropsMenudetailsType {
     Props: {
         CardTittle: string
+    }
+}
+
+export interface PropsBlogsType {
+    params: Promise<{
+        details: string
+    }>
+}
+
+export interface PropsBlogdetailsType {
+    Props: {
+        BlogTitle: string
     }
 }

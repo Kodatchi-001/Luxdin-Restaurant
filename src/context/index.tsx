@@ -12,7 +12,8 @@ const defaultValue: ShareinfoType = {
     Teams: [],
     Menu: [],
     ShareCategories: null,
-    setShareCategories: () => { }
+    setShareCategories: () => {},
+    BlogDetails: []
 };
 
 export const Shareinfo = createContext<ShareinfoType>(defaultValue);
@@ -192,6 +193,61 @@ export default function ShareProvider({ children }: { children: ReactNode }) {
             Picture_5: 'https://framerusercontent.com/images/utyv4DV8F5JHJ7MiB5tB31hR5jk.png'
         }
     ];
+
+    const BlogDetails = [
+        {
+            id: 0,
+            Tittle: 'Pairing wine with food is an age-old practice that can elevate any dining experience.',
+            Description: 'Whether youre at a Michelin-starred restaurant or enjoying a home-cooked meal with friends. The perfect combination of flavors can enhance the taste of both the food and the wine, creating a harmonious balance that tantalizes the taste buds. When it comes to pairing wine with cuisine, there are a few key principles to keep in mind. One of the most important factors is to consider the flavor profile of both the dish and the wine. For example, a bold, full-bodied red wine like Cabernet Sauvignon pairs well with rich, hearty dishes such as steak or braised lamb, while a crisp, acidic white wine like Sauvignon Blanc complements lighter fare like seafood or salads.',
+            Picture: 'https://framerusercontent.com/images/jzhZGAGcZZks8wfJ332kY8kbIDs.png',
+            Description_2: [
+                { Text: 'Texture is another important consideration when pairing wine with food. Wines with high levels of tannins, such as Cabernet Sauvignon or Syrah, pair well with dishes that have a rich, fatty texture, as the tannins help to cut through the richness and cleanse the palate. Conversely, lighter wines with softer tannins, such as Pinot Noir or Chardonnay, are better suited to dishes with a lighter texture, such as grilled chicken or pasta with a cream-based sauce.' },
+                { Text: 'In addition to considering the flavor and texture of the food and wine, its also important to think about the intensity of the flavors. A wine that is too overpowering can easily overwhelm the flavors of the food, while a wine that is too subtle may get lost in the mix. Aim for a balance of flavors that complement each other without overpowering one another.' },
+                { Text: 'Ultimately, the art of pairing wine with cuisine is about experimentation and discovery. Dont be afraid to try new combinations and trust your own palate to guide you. Whether youre dining out at a fancy restaurant or enjoying a meal at home, the right pairing can take your dining experience to the next level, leaving you with memories to savor long after the meal is over.' }
+            ],
+            Person: 'When pairing wine with cuisine, aim for a balance of flavors that complement each other without overpowering one another.'
+        },
+        {
+            id: 1,
+            Tittle: 'Step into the world of LuxDin, where dining transcends mere sustenance to become an immersive journey of taste, ambiance, and unmatched hospitality.',
+            Description: 'Nestled in the heart of the city, our restaurant is more than just a destination—its an experience to be savored, a celebration of culinary artistry and the finer things in life. Join us as we peel back the layers to unveil the essence of our restaurants signature hospitality, inviting you to embark on a culinary odyssey like no other.',
+            Picture: 'https://framerusercontent.com/images/p5PJ0l4sLWm9fxp4susvHXFJeU.png',
+            Description_2: [
+                { Tittle_Text: 'Crafting Memorable Moments', Text: 'From the moment you step through our doors, youll be greeted by the warm glow of hospitality that sets LuxDin apart. Our dedicated team of chefs, servers, and staff work tirelessly behind the scenes to ensure that every aspect of your dining experience is nothing short of extraordinary. Whether its a special occasion or a spontaneous night out, were here to craft memorable moments that will linger long after the last bite is savored.' },
+                { Tittle_Text: 'A Symphony of Flavors', Text: 'At LuxDin, dining is an art form—a delicate balance of flavors, textures, and aromas that dance across your palate with each bite. From our meticulously curated menu to our carefully selected wine pairings, every dish tells a story of craftsmanship and passion. Whether youre indulging in our signature dishes or exploring our seasonal specials, youll discover a symphony of flavors that will tantalize your taste buds and leave you craving more.' },
+                { Tittle_Text: 'Elevating the Dining Experience', Text: 'Our commitment to excellence extends beyond the plate. From the elegant ambiance of our dining room to the attentive service of our staff, every detail is designed to elevate your dining experience to new heights. Whether youre celebrating a milestone or simply enjoying a night out with friends, our goal is to provide an unforgettable experience that leaves you feeling pampered, satisfied, and eager to return.' },
+                { Tittle_Text: 'Your Invitation Awaits', Text: 'Join us at LuxDin and experience the artistry of our restaurants signature hospitality firsthand. Whether youre a seasoned foodie or a casual diner, theres something for everyone to enjoy. From our innovative dishes to our impeccable service, were here to create moments that will linger in your memory long after youve left our tables. Your invitation awaits—come and savor the magic of LuxDin today!' }
+            ],
+            Person: '"Great food is like great art—it nourishes the soul and inspires the spirit. At LuxDin, we invite you to embark on a culinary odyssey where every dish tells a story and every bite is a masterpiece." - Chef Julia Michaels'
+        },
+        {
+            id: 2,
+            Tittle: 'In the world of fine dining, theres a culinary philosophy that reigns supreme: seasonal cuisine.',
+            Description: 'At LuxDin, we believe that brunch should be a luxurious experience, where every bite is a delight and every moment is savored. Join us as we explore the art of brunch and discover how to elevate your morning meals to new heights of indulgence.',
+            Picture: 'https://framerusercontent.com/images/pON4WxrIEC6By1o4ySU6YF4qbo.png',
+            Description_2: [
+                { Tittle_Text: 'A Symphony of Flavors', Text: 'Seasonal cuisine is all about celebrating the bounty of each season, from the crisp greens of spring to the hearty root vegetables of winter. At LuxDin, our chefs work closely with local farmers and producers to source the freshest seasonal ingredients, ensuring that every dish is bursting with flavor and vitality. From vibrant salads and succulent roasts to delicate desserts, each bite is a celebration of natures bounty.' },
+                { Tittle_Text: 'The Beauty of Local', Text: 'One of the hallmarks of seasonal cuisine is its emphasis on local ingredients. By sourcing from nearby farms and producers, we not only support our local economy but also reduce our carbon footprint and celebrate the unique flavors of our region. From farm-fresh eggs and artisanal cheeses to heirloom tomatoes and wild-caught seafood, every ingredient tells a story of our land and our community.' },
+                { Tittle_Text: 'Craftsmanship and Creativity', Text: 'At LuxDin, we believe that the true artistry of seasonal cuisine lies in the craftsmanship and creativity of our chefs. From preserving the harvest for the colder months to experimenting with new flavor combinations and techniques, our chefs are constantly pushing the boundaries of whats possible with seasonal ingredients. The result? A dining experience that is as exciting as it is delicious.' },
+                { Tittle_Text: 'Sustainability and Stewardship', Text: 'Beyond its culinary delights, seasonal cuisine is also rooted in principles of sustainability and stewardship. By supporting local farmers and producers, reducing food miles, and minimizing food waste, we can create a more sustainable and resilient food system for future generations. At LuxDin, were proud to be part of this movement towards a more sustainable future, one delicious meal at a time.' }
+            ],
+            Person: '"Cooking is an art, but all art requires knowing something about the techniques and materials." - Nathan Myhrvold'
+        },
+        {
+            id: 3,
+            Tittle: 'Brunch is more than just a meal—its a beloved tradition that brings people together to savor delicious food and good company.',
+            Description: 'At LuxDin, we believe that brunch should be a luxurious experience, where every bite is a delight and every moment is savored. Join us as we explore the art of brunch and discover how to elevate your morning meals to new heights of indulgence.',
+            Picture: 'https://framerusercontent.com/images/1tkWRkmhRbRMFd820ryzntcEE.png',
+            Description_2: [
+                { Tittle_Text: 'The Brunch Spread: A Feast for the Senses', Text: 'At LuxDin, our brunch spread is a feast for the senses, featuring an array of delectable dishes designed to tantalize your taste buds and satisfy your cravings. From fluffy pancakes and crispy bacon to savory quiches and fresh fruit platters, theres something for everyone to enjoy. And lets not forget about the drinks—mimosas, Bloody Marys, and artisanal coffees are just a few of the libations that await you at our brunch table.' },
+                { Tittle_Text: 'The Art of Presentation', Text: 'At LuxDin, we believe that presentation is key to creating a memorable brunch experience. Our culinary team takes great care in plating each dish with precision and attention to detail, ensuring that every plate is as beautiful as it is delicious. From elegant table settings to garnishes that add a pop of color, every element is carefully curated to delight the senses and enhance the dining experience.' },
+                { Tittle_Text: 'Quality Ingredients, Exceptional Flavors', Text: 'At the heart of every brunch dish at LuxDin lies quality ingredients and exceptional flavors. We source the freshest seasonal produce, locally sourced meats, and artisanal cheeses to ensure that every bite is bursting with flavor and freshness. Whether youre indulging in our signature eggs Benedict or sampling our house-made pastries, you can taste the difference that quality ingredients make.' },
+                { Tittle_Text: 'Brunch: A Celebration of Life', Text: 'Brunch is more than just a meal—its a celebration of life, love, and good food. Whether youre gathering with friends to catch up over eggs and mimosas or treating yourself to a solo brunch date, theres something magical about the ritual of brunch. At LuxDin, we invite you to join us in celebrating this cherished tradition and indulging in the luxury of a perfect brunch experience.' }
+            ],
+            Person: '"Brunch is breakfast without an alarm clock." - Unknown'
+        }
+    ]
+
     const Share = {
         HoverNavbar, setHoverNavbar,
         FAQ,
@@ -200,7 +256,8 @@ export default function ShareProvider({ children }: { children: ReactNode }) {
         Teams,
         Menu,
         ShareCategories,
-        setShareCategories
+        setShareCategories,
+        BlogDetails
     }
     return (
         <Shareinfo.Provider value={Share}>

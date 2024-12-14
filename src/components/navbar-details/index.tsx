@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 
 export default function NavbarDetails() {
-    const { HoverNavbar, setHoverNavbar, Menu } = useContext(Shareinfo);
+    const { HoverNavbar, setHoverNavbar, Menu, BlogCards } = useContext(Shareinfo);
     const [ChangeColor, setChangeColor] = useState('')
     /*---------------*/
     const HiddenNavbar = (): void => setHoverNavbar?.(false)
@@ -70,7 +70,7 @@ export default function NavbarDetails() {
                     <div className="w-1/3 2xl:w-auto h-full flex items-center">
                         <ul className="h-full flex flex-col justify-between px-8 text-lg gap-2 text-gray-600">
                             <Link href="/blog" className={`${ChangeColor === 'blog' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Blog</Link>
-                            <Link href="/blog-details" className={`${ChangeColor === 'blog-details' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Blog-Details</Link>
+                            <Link href={`/blog/${BlogCards[0].Tittle.replace(/ /g, '-').replace(/&/g, 'and').replace(/:/g, 'yes').replace(/--+/g, '-')}`} className={`${ChangeColor === 'blog-details' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Blog-Details</Link>
                             <Link href="/contact" className={`${ChangeColor === 'contact' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Contact</Link>
                         </ul>
                     </div>

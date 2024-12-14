@@ -1,21 +1,17 @@
 'use client'
 
 import { useContext, useEffect, useState } from "react"
-import { MenuTypes, PropsType } from "@/types";
+import { MenuTypes, PropsMenudetailsType } from "@/types";
 import { Shareinfo } from "@/context";
 import Link from "next/link";
 
-export default function Others({ Props }: PropsType) {
+export default function Others({ Props }: PropsMenudetailsType) {
     const { Menu } = useContext(Shareinfo);
     const [ProductsCategory, setProductsCategory] = useState<string>('')
 
-    const GetCategory = () => {
+    useEffect(() => {
         const product = Menu.filter((item: MenuTypes) => item.Tittle === Props.CardTittle);
         setProductsCategory(product[0]?.Categorie || 'Not Found')
-    }
-
-    useEffect(() => {
-        GetCategory()
     }, [Menu, Props.CardTittle])
 
     return <>

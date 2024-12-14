@@ -1,12 +1,12 @@
 'use client'
 
 import { Shareinfo } from "@/context"
-import { MenuTypes, PropsType } from "@/types"
+import { MenuTypes, PropsMenudetailsType } from "@/types"
 import { useContext } from "react"
 import Logo from "@/../public/images/mandala.png";
 import Image from "next/image";
 
-export default function MainCourse({ Props }: PropsType) {
+export default function MainCourse({ Props }: PropsMenudetailsType) {
     const { Menu } = useContext(Shareinfo);
 
     return <>

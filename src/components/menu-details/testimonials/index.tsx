@@ -1,14 +1,14 @@
 'use client'
 
 import { useContext, useState } from 'react';
-import { MenuTypes, PropsType } from '@/types';
+import { MenuTypes, PropsMenudetailsType } from '@/types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import 'swiper/css';
 import { Shareinfo } from '@/context';
 
-export default function Testimonials({ Props }: PropsType) {
+export default function Testimonials({ Props }: PropsMenudetailsType) {
     const [cardactive, setcardactive] = useState<number>(0);
     const { Menu } = useContext(Shareinfo);
     // Ensure you import Swiper types
