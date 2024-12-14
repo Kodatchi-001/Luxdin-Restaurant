@@ -1,9 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
 
 export interface ShareinfoType {
-    HoverNavbar: boolean | null;
-    setHoverNavbar: Dispatch<SetStateAction<boolean | null>> | null;
-    FAQ: FAQTypes[];
+    HoverNavbar: boolean | null,
+    setHoverNavbar: Dispatch<SetStateAction<boolean | null>> | null,
+    FAQ: FAQTypes[],
+    FAQV2: FAQTypes[],
     BlogCards: BlogCardsTypes[],
     ValuesCards: ValuesCardsTypes[],
     Teams: TeamsTypes[],
