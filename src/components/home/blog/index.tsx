@@ -8,7 +8,7 @@ import { useContext } from "react";
 export default function BlogHome() {
     const { BlogCards } = useContext(Shareinfo);
     return <>
-        <section className="w-full lg:h-screen 2xl:h-[80vh] mt-5 lg:mt-24 mb-10 lg:mb-20 pt-5">
+        <section className="w-full lg:h-screen 2xl:max-h-[800px] mt-5 lg:mt-24 mb-10 lg:mb-20 pt-5">
             {BlogCards && BlogCards.length > 0 ?
                 BlogCards
                     .slice(0, 1)

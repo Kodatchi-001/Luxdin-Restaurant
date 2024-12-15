@@ -13,8 +13,8 @@ export default function TestimonialsHome() {
     const handelslide = (slide: SwiperCore) => setcardactive(slide.activeIndex);
 
     return <>
-        <section className="w-full h-[70vh] lg:h-screen xl:h-[90vh] mt-5 lg:mt-16 lg:px-5 xl:px-16">
-            <div className="w-full h-full flex items-end overflow-hidden relative">
+        <section className="w-full h-[70vh] lg:h-screen xl:h-[90vh] 2xl:max-h-[800px] flex justify-center mt-5 lg:mt-16 lg:px-5 xl:px-16">
+            <div className="w-full 2xl:max-w-[1600px] h-full flex items-end overflow-hidden relative">
                 <div className='w-full h-full flex'>
                     <Swiper
                         modules={[Autoplay]}

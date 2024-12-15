@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Hero() {
     return <>
-        <div className="hidden lg:flex py-20"></div>
-        <section>
-            <div className="w-full px-5 lg:px-8 xl:px-20 2xl:px-[80px] pb-8 lg:pb-14 gap-5 sm:gap-10 xl:gap-0 overflow-hidden mt-8 lg:mt-0 flex justify-between items-end flex-wrap">
+        <div className="min-h-20 sm:min-h-32 lg:min-h-40"></div>
+        <section className="flex flex-wrap justify-center">
+            <div className="w-full 2xl:max-w-[1600px] px-5 lg:px-8 xl:px-20 pb-8 lg:pb-14 gap-5 sm:gap-10 xl:gap-0 overflow-hidden mt-8 sm:mt-0 flex justify-between items-end flex-wrap">
                 <h1 className="w-full lg:w-5/6 xl:w-[60%] text-5xl lg:text-7xl xl:text-[6.2rem]">
                     Experience Finest Feasts
                 </h1>
@@ -19,7 +19,7 @@ export default function Hero() {
                     </Link>
                 </div>
             </div>
-            <div className="w-full h-[62vh] xl:h-[80vh] background-image-size" id="bg-image"></div>
+            <div className="w-full h-[62vh] xl:h-[80vh] 2xl:max-h-[800px] background-image-size" id="bg-image"></div>
         </section>
     </>
 }
