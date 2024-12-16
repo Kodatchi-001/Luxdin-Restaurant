@@ -65,7 +65,7 @@ export default function Header() {
         <header className={`w-full flex justify-center xl:shadow-none z-50 overflow-hidden absolute text-${Color} ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''}`}
             onMouseLeave={() => setHoverNavbar?.(false)}>
             <div className="w-full 2xl:max-w-[1600px] h-full flex justify-between items-center flex-wrap px-6 xl:px-20 2xl:px-[90px] pb-6 xl:pb-0">
-                <div className="w-full xl:w-4/6 2xl:w-auto lg:h-[10vh] xl:h-full flex items-center py-7 lg:py-6">
+                <div className="w-full xl:w-4/6 2xl:w-auto lg:h-[10vh] xl:h-full flex items-center py-7 lg:py-10 2xl:py-6">
                     <div className="w-1/2 lg:w-full h-full flex items-center gap-12">
                         <Link href="/" onClick={() => setHoverNavbar?.(false)}>
                             <h1 className="text-2xl text-[#d1a374] font-bold cursor-pointer">LuxDin</h1>

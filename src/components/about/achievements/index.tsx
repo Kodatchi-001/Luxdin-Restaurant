@@ -1,8 +1,8 @@
 export default function Achievements() {
     return <>
-        <section className="w-full lg:h-[75vh] p-3 lg:px-10 xl:px-20">
-            <div className="w-full h-full background-image-size px-5 lg:px-16 py-14" id="bg-section-5">
-                <div className="w-full h-full flex justify-between flex-wrap gap-10 lg:gap-5">
+        <section className="w-full lg:h-[75vh] 2xl:max-h-[900px] p-3 lg:px-10 xl:px-20">
+            <div className="w-full h-full flex justify-center background-image-size px-5 lg:px-16 py-14" id="bg-section-5">
+                <div className="w-full 2xl:max-w-[1600px] h-full flex justify-between flex-wrap gap-10 lg:gap-5">
                     <div className="w-full lg:w-1/3 h-full flex flex-col gap-3 lg:gap-5 text-white">
                         <h2 className="text-xl">ACHIEVEMENTS</h2>
                         <h1 className="text-3xl lg:text-6xl xl:text-7xl">Recognized Excellence</h1>

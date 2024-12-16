@@ -8,8 +8,8 @@ export default function Team() {
     const { Teams } = useContext(Shareinfo);
 
     return <>
-        <section className="w-full h-full mt-5 lg:mt-14 flex flex-wrap px-4 lg:px-14 xl:px-20 pt-14">
-            <div className="w-full h-full flex justify-between flex-wrap gap-8 sm:gap-2 lg:gap-5">
+        <section className="w-full h-full mt-5 lg:mt-14 flex justify-center flex-wrap px-4 lg:px-14 xl:px-20 pt-14">
+            <div className="w-full 2xl:max-w-[1600px] h-full flex justify-between flex-wrap gap-8 sm:gap-2 lg:gap-5">
                 <div className="w-full sm:w-[48%] xl:w-[32%] lg:h-[50vh] flex flex-col justify-center gap-8 lg:gap-20 mb-8 lg:mb-0">
                     <div className="w-full lg:w-auto flex flex-col justify-center gap-3 lg:gap-5">
                         <h2 className="text-xl text-[#d1a374]">TEAM</h2>
@@ -23,7 +23,7 @@ export default function Team() {
                 </div>
                 {Teams.length > 0 ?
                     Teams.slice(0, 5).map((items: TeamsTypes, index) => (
-                        <div key={index} className="w-full sm:w-[48%] xl:w-[32%] h-[50vh] lg:h-[65vh] card-team sm:mt-5 lg:mt-0">
+                        <div key={index} className="w-full sm:w-[48%] xl:w-[32%] h-[50vh] lg:h-[65vh] 2xl:max-h-[800px] card-team sm:mt-5 lg:mt-0">
                             <div className="w-full h-[89%] flex items-end background-image-size" style={{ backgroundImage: `url(${items.Picture})` }}>
                                 <div className="w-full h-1/5 lg:h-full info-team flex lg:hidden justify-center items-center gap-10 text-xl font-bold text-white lg:bg-[#132d2d5e]">
                                     <h1 className="cursor-pointer">X</h1>
