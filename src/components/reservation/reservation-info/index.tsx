@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 export default function Reservation_Information() {
     return <>
         <section className="w-full flex justify-center lg:px-6 xl:px-24 mt-10">
-            <div className="w-full 2xl:max-w-7xl h-full flex flex-col gap-8 px-10 py-16 lg:p-16 bg-[#173534] text-white">
+            <div className="w-full 2xl:max-w-[1600px] h-full flex flex-col gap-8 px-5 lg:px-10 py-10 lg:p-16 bg-[#173534] text-white">
                 <div className="w-full flex gap-4">
                     <Box className="w-1/2">
                         <TextField fullWidth type="text" className="w-full" size="medium" label="First Name" name='FirstName'
