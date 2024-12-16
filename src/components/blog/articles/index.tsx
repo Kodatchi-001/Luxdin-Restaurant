@@ -8,7 +8,7 @@ export default function Articles() {
     const { BlogCards } = useContext(Shareinfo);
 
     return <>
-        <section className="w-full lg:h-screen mt-5 lg:mt-20">
+        <section className="w-full lg:h-screen 2xl:max-h-[800px] mt-5 lg:mt-20">
             {BlogCards && BlogCards.length > 0 ? (
                 BlogCards
                     .slice(4, 5)
