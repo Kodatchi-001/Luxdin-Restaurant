@@ -1,6 +1,6 @@
 export default function Favorite() {
     return <>
-        <section className="w-full lg:h-screen mt-20 flex flex-wrap">
+        <section className="w-full lg:h-screen 2xl:max-h-[800px] mt-20 flex flex-wrap">
             <div className="w-full lg:w-[54%] h-[45vh] lg:h-full background-image-size" id="bg-Services-3"></div>
             <div className="w-full lg:w-[46%] h-full px-5 xl:px-24 pt-14 lg:pt-44 flex flex-col items-start gap-10 lg:gap-24 py-14 lg:py-0 bg-[#183534]">
                 <div className="flex flex-col gap-8">
