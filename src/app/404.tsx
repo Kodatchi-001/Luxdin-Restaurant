@@ -11,8 +11,8 @@ export default function NotFound() {
                                 404
                             </h1>
                             <p className="w-full lg:w-5/6 text-xl text-[#6e5959]">
-                                Oops! It looks like the page you're looking for doesn't exist.
-                                But don't worry, the culinary journey at Luxdin awaits you. Head
+                                Oops! It looks like the page youre looking for doesnt exist.
+                                But dont worry, the culinary journey at Luxdin awaits you. Head
                                 back to our homepage to explore our exquisite menu, make a reservation,
                                 or discover more about our dining experience.
                             </p>
