@@ -2,16 +2,18 @@
 
 import { Shareinfo } from "@/context";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 export default function NavbarDetails() {
     const { HoverNavbar, setHoverNavbar, Menu, BlogCards } = useContext(Shareinfo);
-    const [ChangeColor, setChangeColor] = useState('')
+    const [ChangeColor, setChangeColor] = useState<string>('');
+    const Pathname = usePathname()
     /*---------------*/
     const HiddenNavbar = (): void => setHoverNavbar?.(false)
     /*---------------*/
     useEffect(() => {
-        switch (window.location.pathname) {
+        switch (Pathname) {
             case '/':
                 setChangeColor('HomePage')
                 break;
@@ -45,7 +47,7 @@ export default function NavbarDetails() {
             default:
                 setChangeColor('');
         }
-    }, [])
+    }, [Pathname])
 
     return <>
         <div className="w-full lg:flex justify-center pl-24 2xl:pl-0 absolute lg:mt-20 hidden">

@@ -2,13 +2,15 @@
 
 import { Shareinfo } from "@/context";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 export default function Header() {
     const [NavbarSize, setNavbarSize] = useState<boolean>(false);
     const [ChangeColor, setChangeColor] = useState<string>('');
     const { HoverNavbar, setHoverNavbar } = useContext(Shareinfo);
-    const [Color, setColor] = useState<string>('black');
+    const [Color, setColor] = useState<string>('');
+    const Pathname = usePathname();
     /*------------------------*/
     const ChangeSize = (): void => setNavbarSize((prevstate: boolean) => !prevstate);
     /*------------------------*/
@@ -21,29 +23,34 @@ export default function Header() {
     }, [NavbarSize])
     /*-------------*/
     useEffect(() => {
-        switch (window.location.pathname) {
+        switch (Pathname) {
             case '/':
                 setChangeColor('HomePage')
+                setColor('black');
                 break;
             case '/about':
                 setChangeColor('about')
                 setColor('white');
                 break;
             case '/menu':
-                setChangeColor('menu')
+                setChangeColor('menu');
+                setColor('black');
                 break;
             case '/menu/':
-                setChangeColor('menu-details')
+                setChangeColor('menu-details');
+                setColor('black');
                 break;
             case '/services':
                 setChangeColor('services')
                 setColor('white');
                 break;
             case '/team':
-                setChangeColor('team')
+                setChangeColor('team');
+                setColor('black');
                 break;
             case '/reservation':
-                setChangeColor('reservation')
+                setChangeColor('reservation');
+                setColor('black');
                 break;
             case '/blog':
                 setChangeColor('blog');
@@ -54,12 +61,13 @@ export default function Header() {
                 setColor('white');
                 break;
             case '/contact':
-                setChangeColor('contact')
+                setChangeColor('contact');
+                setColor('black');
                 break;
             default:
                 setChangeColor('');
         }
-    }, [])
+    }, [Pathname])
 
     return <>
         <header className={`w-full flex justify-center absolute text-${Color} ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''}`}
@@ -106,7 +114,7 @@ export default function Header() {
                             <h2>+123 456 7890</h2>
                         </div>
                         <div className="w-[0.1vw] h-[4vh] border border-[#c17d00]"></div>
-                        <Link href="/" className="text-lg">
+                        <Link href="/reservation" className="text-lg">
                             Book Table
                         </Link>
                     </div>
@@ -117,7 +125,7 @@ export default function Header() {
                         <h2>+123 456 7890</h2>
                     </div>
                     <div className="py-3 px-[0.2px] bg-[#d1a374]"></div>
-                    <Link href="/">
+                    <Link href="/reservation">
                         Book Table
                     </Link>
                 </div>
