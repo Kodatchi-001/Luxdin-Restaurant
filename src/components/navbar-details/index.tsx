@@ -8,7 +8,7 @@ import { useContext, useEffect, useState } from "react";
 export default function NavbarDetails() {
     const { HoverNavbar, setHoverNavbar, Menu, BlogCards } = useContext(Shareinfo);
     const [ChangeColor, setChangeColor] = useState<string>('');
-    const Pathname = usePathname()
+    const Pathname = usePathname();
     /*---------------*/
     const HiddenNavbar = (): void => setHoverNavbar?.(false)
     /*---------------*/
@@ -22,9 +22,6 @@ export default function NavbarDetails() {
                 break;
             case '/menu':
                 setChangeColor('menu')
-                break;
-            case '/menu-details':
-                setChangeColor('menu-details')
                 break;
             case '/services':
                 setChangeColor('services')
@@ -45,7 +42,15 @@ export default function NavbarDetails() {
                 setChangeColor('contact')
                 break;
             default:
-                setChangeColor('');
+                // Vérifie les routes dynamiques qui commencent par '/menu'
+                if (Pathname.startsWith('/menu')) {
+                    setChangeColor('menu-details');
+                } else if (Pathname.startsWith('/blog')) {
+                    setChangeColor('blog-details');
+                }
+                else {
+                    setChangeColor('');
+                }
         }
     }, [Pathname])
 
@@ -60,7 +65,7 @@ export default function NavbarDetails() {
                             <ul className="h-full flex flex-col justify-between text-lg gap-2 text-gray-600">
                                 <Link href="/about" className={`${ChangeColor === 'about' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>About</Link>
                                 <Link href="/menu" className={`${ChangeColor === 'menu' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Menu</Link>
-                                <Link href={`/menu/${Menu ? Menu[0].Tittle?.replace(/ /g, '-') : ''}`} className={`${ChangeColor === 'Menu-Details' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Menu Details</Link>
+                                <Link href={`/menu/${Menu ? Menu[0].Tittle?.replace(/ /g, '-') : ''}`} className={`${ChangeColor === 'menu-details' ? 'text-[#a46c32]' : ''} hover:text-[#a46c32]`} onClick={HiddenNavbar}>Menu Details</Link>
                             </ul>
                         </div>
                         <div className="w-1/3 2xl:w-auto h-full flex items-center border-l border-r border-[#c17d00]">

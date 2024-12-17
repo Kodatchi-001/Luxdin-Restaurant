@@ -15,7 +15,7 @@ export default function Testimonials({ Props }: PropsMenudetailsType) {
     SwiperCore.use([Autoplay]);
     const handelslide = (slide: SwiperCore) => setcardactive(slide.activeIndex)
     return <>
-          <section className='w-full h-[70vh] lg:h-screen xl:h-[90vh] 2xl:max-h-[800px] flex justify-center'>
+        <section className='w-full h-[70vh] lg:h-screen xl:h-[90vh] 2xl:max-h-[900px] flex justify-center'>
             <div className='w-full 2xl:max-w-[1600px] h-full'>
                 {Menu
                     .filter((item: MenuTypes) => item.Tittle === Props.CardTittle)
@@ -32,7 +32,7 @@ export default function Testimonials({ Props }: PropsMenudetailsType) {
                                         <SwiperSlide>
                                             <div className="w-full h-full p-2 cursor-pointer">
                                                 <div className="w-full h-full flex items-end p-3 lg:p-10 pb-12 lg:pb-14 background-image-size" style={{ backgroundImage: `url(${item.Picture_3})` }}>
-                                                    <div className="w-full lg:h-[55%] flex flex-col justify-between p-6 lg:p-8 gap-6 lg:gap-0 bg-[#fffdf8]">
+                                                    <div className="w-full h-auto flex flex-col justify-between p-6 lg:p-8 gap-6 lg:gap-5 bg-[#fffdf8]">
                                                         <h1 className="text-xl text-[#d1a374]">TESTIMONIALS</h1>
                                                         <h1 className="lg:text-4xl">
                                                             Indulging in this was an unparalleled experience of culinary excellence.
@@ -47,7 +47,7 @@ export default function Testimonials({ Props }: PropsMenudetailsType) {
                                         <SwiperSlide>
                                             <div className="w-full h-full p-2 cursor-pointer">
                                                 <div className="w-full h-full flex items-end p-3 lg:p-10 pb-12 lg:pb-14 background-image-size" style={{ backgroundImage: `url(${item.Picture_4})` }}>
-                                                    <div className="w-full lg:h-[55%] flex flex-col justify-between p-6 lg:p-8 gap-6 lg:gap-0 bg-[#fffdf8]">
+                                                    <div className="w-full h-auto flex flex-col justify-between p-6 lg:p-8 gap-6 lg:gap-5 bg-[#fffdf8]">
                                                         <h1 className="text-xl text-[#d1a374]">TESTIMONIALS</h1>
                                                         <h1 className="lg:text-4xl">
                                                             The Prime Truffle Ribeye exceeded my expectations.
@@ -62,7 +62,7 @@ export default function Testimonials({ Props }: PropsMenudetailsType) {
                                         <SwiperSlide>
                                             <div className="w-full h-full p-2 cursor-pointer">
                                                 <div className="w-full h-full flex items-end p-3 lg:p-10 pb-12 lg:pb-14 background-image-size" style={{ backgroundImage: `url(${item.Picture_5})` }}>
-                                                    <div className="w-full lg:h-[55%] flex flex-col justify-between p-6 lg:p-8 gap-6 lg:gap-0 bg-[#fffdf8]">
+                                                    <div className="w-full h-auto flex flex-col justify-between p-6 lg:p-8 gap-6 lg:gap-5 bg-[#fffdf8]">
                                                         <h1 className="text-xl text-[#d1a374]">TESTIMONIALS</h1>
                                                         <h1 className="lg:text-4xl">
                                                             The tenderness of the steak combined with the

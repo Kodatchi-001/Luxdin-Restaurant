@@ -56,15 +56,16 @@ export default function Header() {
                 setChangeColor('blog');
                 setColor('white');
                 break;
-            case '/blog-details':
-                setChangeColor('blog-details');
-                setColor('white');
-                break;
             case '/contact':
                 setChangeColor('contact');
                 setColor('black');
                 break;
             default:
+                if (Pathname.startsWith('/blog')) {
+                    setColor('Black')
+                } else {
+                    setColor('')
+                }
                 setChangeColor('');
         }
     }, [Pathname])
@@ -99,22 +100,22 @@ export default function Header() {
                     <div className="w-full h-1/2 flex flex-col gap-5">
                         <h1 className="w-full text-center text-[#c17d00] text-xl">INNER PAGES</h1>
                         <div className="text-xl lg:text-2xl bg-red-700w flex justify-between items-center flex-wrap pt-2 text-gray-600">
-                            <Link href="/about" className={`w-1/3 text-center ${ChangeColor === 'about' ? 'text-[#a46c32]' : ''}`}>About</Link>
-                            <Link href="/menu" className={`w-1/3 text-center ${ChangeColor === 'menu' ? 'text-[#a46c32]' : ''}`}>Menu</Link>
-                            <Link href="/services" className={`w-1/3 text-center ${ChangeColor === 'services' ? 'text-[#a46c32]' : ''}`}>Services</Link>
-                            <Link href="/team" className={`w-1/3 text-center mt-3 ${ChangeColor === 'team' ? 'text-[#a46c32]' : ''}`}>Team</Link>
-                            <Link href="/contact" className={`w-1/3 text-center mt-3 ${ChangeColor === 'contact' ? 'text-[#a46c32]' : ''}`}>Contact</Link>
-                            <Link href="/blog" className={`w-1/3 text-center mt-3 ${ChangeColor === 'blog' ? 'text-[#a46c32]' : ''}`}>Blog</Link>
-                            <Link href="/reservation" className={`w-1/3 flex justify-center mt-3 ${ChangeColor === 'reservation' ? 'text-[#a46c32]' : ''}`}>Reservation</Link>
+                            <Link href="/about" className={`w-1/3 text-center ${ChangeColor === 'about' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>About</Link>
+                            <Link href="/menu" className={`w-1/3 text-center ${ChangeColor === 'menu' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Menu</Link>
+                            <Link href="/services" className={`w-1/3 text-center ${ChangeColor === 'services' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Services</Link>
+                            <Link href="/team" className={`w-1/3 text-center mt-3 ${ChangeColor === 'team' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Team</Link>
+                            <Link href="/contact" className={`w-1/3 text-center mt-3 ${ChangeColor === 'contact' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Contact</Link>
+                            <Link href="/blog" className={`w-1/3 text-center mt-3 ${ChangeColor === 'blog' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Blog</Link>
+                            <Link href="/reservation" className={`w-1/3 flex justify-center mt-3 ${ChangeColor === 'reservation' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Reservation</Link>
                         </div>
                     </div>
-                    <div className="w-full h-1/2 flex justify-around sm:justify-center items-center pt-8 px-2 pb-6 sm:gap-14">
-                        <div className="h-full flex justify-start items-center gap-2">
+                    <div className="w-full h-1/2 flex justify-around sm:justify-center items-center pt-8 px-2 pb-6 sm:gap-14 text-black">
+                        <div className="h-full flex justify-start items-center gap-2" onClick={ChangeSize}>
                             <i className='bx bxs-phone-call text-xl text-[#c17d00]'></i>
                             <h2>+123 456 7890</h2>
                         </div>
                         <div className="w-[0.1vw] h-[4vh] border border-[#c17d00]"></div>
-                        <Link href="/reservation" className="text-lg">
+                        <Link href="/reservation" className="text-lg" onClick={ChangeSize}>
                             Book Table
                         </Link>
                     </div>

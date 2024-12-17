@@ -26,7 +26,7 @@ export default function Latest() {
                                             <h2 className="px-5 py-[10px] text-lg bg-white text-[#321d1d]">{item.Date}</h2>
                                         </div>
                                         <div className="w-full h-full flex justify-center items-center bg-[#331e1eab] opacity-0 absolute duration-500">
-                                            <Link href="/" className="px-8 py-[6.5px] flex items-center gap-1 text-[17px] border border-white text-white rounded-full">
+                                            <Link href={`/blog/${item.Tittle.replace(/ /g, '-').replace(/&/g, 'and').replace(/:/g, '=').replace(/--+/g, '-')}`} className="px-8 py-[6.5px] flex items-center gap-1 text-[17px] border border-white text-white rounded-full">
                                                 Read More
                                             </Link>
                                         </div>

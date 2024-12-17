@@ -14,7 +14,7 @@ export default function Hero() {
                         Indulge in a gastronomic journey where every dish is a
                         culinary masterpiece, crafted with ultra precision.
                     </p>
-                    <Link href="/" className="w-full sm:w-auto sm:px-14 py-4 lg:py-3 text-center text-2xl duration-500 bg-[#d1a374] hover:bg-[#3f2d0b] text-white rounded-full">
+                    <Link href="/menu" className="w-full sm:w-auto sm:px-14 py-4 lg:py-3 text-center text-2xl duration-500 bg-[#d1a374] hover:bg-[#3f2d0b] text-white rounded-full">
                         Explore Our Menu
                     </Link>
                 </div>

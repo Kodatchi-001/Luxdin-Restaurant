@@ -2,13 +2,14 @@
 
 import { Shareinfo } from "@/context"
 import { MenuTypes, PropsMenudetailsType } from "@/types"
+import Link from "next/link";
 import { useContext } from "react"
 
 export default function Hero({ Props }: PropsMenudetailsType) {
     const { Menu } = useContext(Shareinfo);
 
     return <>
-        <section className="w-full h-full flex justify-center pt-24">
+        <section className="w-full h-full flex justify-center pt-24 lg:py-20">
             <div className="w-full 2xl:max-w-[1600px] h-full">
                 {Menu
                     .filter((item: MenuTypes) => item.Tittle === Props.CardTittle)
@@ -28,9 +29,11 @@ export default function Hero({ Props }: PropsMenudetailsType) {
                                 </div>
                                 <div className="w-full xl:w-5/6 h-1/6 flex justify-between items-center py-2 lg:py-0 border-t border-b border-[#3f2d0b76]">
                                     <h1 className="text-3xl lg:text-5xl text-[#a47849] font-extrabold">${item.Price}.00</h1>
-                                    <h1 className="px-8 py-3 sm:py-2 lg:py-3 rounded-full text-lg lg:text-2xl bg-[#3f2d0b] hover:bg-[#8a6624] duration-500 text-white cursor-pointer">
-                                        Make Reservation
-                                    </h1>
+                                    <Link href="/reservation" className="px-8 py-3 sm:py-2 lg:py-3 rounded-full text-lg lg:text-2xl bg-[#3f2d0b] hover:bg-[#8a6624] duration-500 text-white cursor-pointer">
+                                        <h1>
+                                            Make Reservation
+                                        </h1>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="w-full lg:w-1/2 h-[40vh] lg:h-full p-1 lg:pl-14 lg:pr-2 lg:py-8">

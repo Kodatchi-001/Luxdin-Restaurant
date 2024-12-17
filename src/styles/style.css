@@ -36,6 +36,7 @@ p {
 }
 
 h1,
+.font,
 button {
     font-family: 'Zodiak', serif;
 }
