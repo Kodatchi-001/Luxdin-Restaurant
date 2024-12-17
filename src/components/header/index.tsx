@@ -62,10 +62,10 @@ export default function Header() {
     }, [])
 
     return <>
-        <header className={`w-full flex justify-center xl:shadow-none z-50 overflow-hidden absolute text-${Color} ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''}`}
+        <header className={`w-full flex justify-center absolute text-${Color} ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''}`}
             onMouseLeave={() => setHoverNavbar?.(false)}>
-            <div className="w-full 2xl:max-w-[1600px] h-full flex justify-between items-center flex-wrap px-6 xl:px-20 2xl:px-[90px] pb-6 xl:pb-0">
-                <div className="w-full xl:w-4/6 2xl:w-auto lg:h-[10vh] xl:h-full flex items-center py-7">
+            <div className="w-full 2xl:max-w-[1600px] h-full flex justify-between items-center flex-wrap px-6 xl:px-20 2xl:px-[90px]">
+                <div className="w-full xl:w-4/6 2xl:w-auto lg:h-[10vh] xl:h-full flex items-center py-6 sm:py-7">
                     <div className="w-1/2 lg:w-full h-full flex items-center gap-12">
                         <Link href="/" onClick={() => setHoverNavbar?.(false)}>
                             <h1 className="text-2xl text-[#d1a374] font-bold cursor-pointer">LuxDin</h1>
@@ -100,7 +100,7 @@ export default function Header() {
                             <Link href="/reservation" className={`w-1/3 flex justify-center mt-3 ${ChangeColor === 'reservation' ? 'text-[#a46c32]' : ''}`}>Reservation</Link>
                         </div>
                     </div>
-                    <div className="w-full h-1/2 flex justify-around sm:justify-center items-center pt-8 px-2 sm:gap-14">
+                    <div className="w-full h-1/2 flex justify-around sm:justify-center items-center pt-8 px-2 pb-6 sm:gap-14">
                         <div className="h-full flex justify-start items-center gap-2">
                             <i className='bx bxs-phone-call text-xl text-[#c17d00]'></i>
                             <h2>+123 456 7890</h2>
