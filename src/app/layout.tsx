@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import NavbarDetails from "@/components/navbar-details";
 import ShareProvider from "@/context";
 import Footer from "@/components/footer";
+import ReduxProvider from "@/store/provider";
 
 export const metadata: Metadata = {
   title: "LuxDin || Luxdin-Restaurant",
@@ -26,7 +27,9 @@ export default function RootLayout({
         <ShareProvider>
           <Header />
           <NavbarDetails />
-          {children}
+          <ReduxProvider>
+            {children}
+          </ReduxProvider>
           <Footer />
         </ShareProvider>
       </body>

@@ -89,3 +89,15 @@ export interface PropsBlogdetailsType {
         BlogTitle: string
     }
 }
+
+export interface Reservation_ContactType {
+    FirstName: string,
+    LastName: string,
+    PhoneNumber?: string,
+    Email: string,
+    NumberGuels?: number,
+    Date?: string | Date,
+    Time?: string,
+    AdditionalInfo?: string,
+    Message?: string
+}
