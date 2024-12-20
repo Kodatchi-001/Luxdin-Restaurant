@@ -1,11 +1,28 @@
 'use client'
 
-import { Shareinfo } from "@/context";
+import { GetTeamApi } from "@/api/team";
+import Loading from "@/components/loading";
 import { TeamsTypes } from "@/types";
-import { useContext } from "react"
+import { useEffect, useState } from "react"
 
 export default function Team() {
-    const { Teams } = useContext(Shareinfo);
+    const [Team, setTeam] = useState<TeamsTypes[]>([]);
+    const [loading, setloading] = useState<boolean>(true);
+
+    const GetTeam = async () => {
+        try {
+            const response = await GetTeamApi()
+            setTeam(response || [])
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setloading(false)
+        }
+    }
+
+    useEffect(() => {
+        GetTeam()
+    }, [])
 
     return <>
         <section className="w-full h-full mt-5 lg:mt-14 flex justify-center flex-wrap px-4 lg:px-14 xl:px-20 pt-14">
@@ -21,24 +38,28 @@ export default function Team() {
                         </button>
                     </div>
                 </div>
-                {Teams.length > 0 ?
-                    Teams.slice(0, 5).map((items: TeamsTypes, index) => (
-                        <div key={index} className="w-full sm:w-[48%] xl:w-[32%] h-[50vh] lg:h-[65vh] 2xl:max-h-[800px] card-team sm:mt-5 lg:mt-0">
-                            <div className="w-full h-[89%] flex items-end background-image-size" style={{ backgroundImage: `url(${items.Picture})` }}>
-                                <div className="w-full h-1/5 lg:h-full info-team flex lg:hidden justify-center items-center gap-10 text-xl font-bold text-white lg:bg-[#132d2d5e]">
-                                    <h1 className="cursor-pointer">X</h1>
-                                    <h1 className="cursor-pointer">IG</h1>
-                                    <h1 className="cursor-pointer">FB</h1>
+                {loading ? (
+                    <Loading height={80} />
+                ) : (
+                    Team.length > 0 ?
+                        Team.slice(0, 5).map((items: TeamsTypes, index) => (
+                            <div key={index} className="w-full sm:w-[48%] xl:w-[32%] h-[50vh] lg:h-[65vh] 2xl:max-h-[800px] card-team sm:mt-5 lg:mt-0">
+                                <div className="w-full h-[89%] flex items-end background-image-size" style={{ backgroundImage: `url(${items.Picture})` }}>
+                                    <div className="w-full h-1/5 lg:h-full info-team flex lg:hidden justify-center items-center gap-10 text-xl font-bold text-white lg:bg-[#132d2d5e]">
+                                        <h1 className="cursor-pointer">X</h1>
+                                        <h1 className="cursor-pointer">IG</h1>
+                                        <h1 className="cursor-pointer">FB</h1>
+                                    </div>
+                                </div>
+                                <div className="w-full h-[11%] flex justify-between items-center info-team-2 border-b border-[#0000007e] text-[16px]">
+                                    <h2 className="font-bold">{items.Name}</h2>
+                                    <h2 className="text-gray-700">{items.Job}</h2>
                                 </div>
                             </div>
-                            <div className="w-full h-[11%] flex justify-between items-center info-team-2 border-b border-[#0000007e] text-[16px]">
-                                <h2 className="font-bold">{items.Name}</h2>
-                                <h2 className="text-gray-700">{items.Job}</h2>
-                            </div>
-                        </div>
-                    )) : (
-                        <h1>!Sorry,we dont have any team</h1>
-                    )}
+                        )) : (
+                            <h1>!Sorry,we dont have any team</h1>
+                        ))
+                }
             </div>
         </section>
     </>

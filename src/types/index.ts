@@ -7,7 +7,6 @@ export interface ShareinfoType {
     FAQV2: FAQTypes[],
     BlogCards: BlogCardsTypes[],
     ValuesCards: ValuesCardsTypes[],
-    Teams: TeamsTypes[],
     Menu: MenuTypes[],
     ShareCategories: string | null,
     setShareCategories: Dispatch<SetStateAction<string | null>>,
