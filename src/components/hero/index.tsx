@@ -1,10 +1,4 @@
-interface StructurProps {
-    FirstText: string,
-    LastText: string,
-    PictureId: string
-}
-
-export default function Hero({ FirstText, LastText, PictureId }: StructurProps) {
+export default function Hero({ FirstText, LastText, PictureId }: { FirstText: string, LastText: string, PictureId: string }) {
     return <>
         <section>
             <div className="w-full h-[40vh] sm:h-[45vh] lg:h-[55vh] 2xl:max-h-[500px] flex justify-center text-white background-image-size" id={`${PictureId}`}>

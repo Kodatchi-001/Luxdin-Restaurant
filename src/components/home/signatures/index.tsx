@@ -1,6 +1,13 @@
+'use client'
+
+import { Shareinfo } from "@/context";
+import { MenuTypes } from "@/types";
 import Link from "next/link";
+import { useContext } from "react";
 
 export default function SignaturesHome() {
+    const { Menu } = useContext(Shareinfo);
+
     return <>
         <section className="w-full flex justify-center mt-12 lg:mt-24 xl:mt-16 px-4 xl:px-20">
             <div className="w-full 2xl:max-w-[1600px] flex flex-wrap gap-6">
@@ -15,47 +22,20 @@ export default function SignaturesHome() {
                 </div>
                 <div className="w-full flex justify-between flex-wrap">
                     <div className="w-full lg:w-[50%] lg:h-full flex flex-col justify-between gap-3 lg:gap-0 lg:pr-16 lg:pb-5">
-                        {/*Cards*/}
-                        <Link href="/" className="w-full lg:h-[23%] py-8 flex flex-col gap-3 cards-Homepage cursor-pointer">
-                            <div className="w-full flex justify-between">
-                                <h1 className="w-5/6 text-2xl font-bold duration-300">Prime Truffle Ribeye</h1>
-                                <h2 className="text-lg font-bold duration-300">$60</h2>
-                            </div>
-                            <p className="w-full lg:w-5/6 xl:w-[90%] text-[17px]">
-                                Succulent ribeye steak infused with aromatic
-                                truffle essence, served with buttery mashed potatoes.
-                            </p>
-                        </Link>
-                        <Link href="/" className="w-full lg:h-[23%] py-8 flex flex-col gap-3 cards-Homepage cursor-pointer">
-                            <div className="w-full flex justify-between">
-                                <h1 className="w-5/6 text-2xl font-bold duration-300">Crispy Pork Tonkatsu</h1>
-                                <h2 className="text-lg font-bold duration-300">$30</h2>
-                            </div>
-                            <p className="w-full lg:w-5/6 xl:w-[90%] text-[17px]">
-                                Succulent pork cutlets delicately coated in panko breadcrumbs,
-                                fried to golden perfection, and served with a tangy tonkatsu sauce.
-                            </p>
-                        </Link>
-                        <Link href="/" className="w-full lg:h-[23%] py-8 flex flex-col gap-3 cards-Homepage cursor-pointer">
-                            <div className="w-full flex justify-between">
-                                <h1 className="w-5/6 text-2xl font-bold duration-300">Steak & Grilled Cauliflower</h1>
-                                <h2 className="text-lg font-bold duration-300">$80</h2>
-                            </div>
-                            <p className="w-full lg:w-5/6 xl:w-[90%] text-[17px]">
-                                Tender, perfectly seared steak paired with smoky grilled cauliflower,
-                                harmonizing to create a decadent gastronomic experience.
-                            </p>
-                        </Link>
-                        <Link href="/" className="w-full lg:h-[23%] py-8 flex flex-col gap-3 cards-Homepage cursor-pointer">
-                            <div className="w-full flex justify-between">
-                                <h1 className="w-5/6 text-2xl font-bold duration-300">Oceanic Symphony Risotto</h1>
-                                <h2 className="text-lg font-bold duration-300">$80</h2>
-                            </div>
-                            <p className="w-full lg:w-5/6 xl:w-[90%] text-[17px]">
-                                A vibrant paella bursting with flavors of the Mediterranean,
-                                featuring fresh seafood and saffron-infused rice.
-                            </p>
-                        </Link>
+                        {Menu && Menu.length > 0 ? (
+                            Menu.slice(0, 4)
+                                .map((item: MenuTypes) => (
+                                    <Link key={item.id} href={`/menu/${item.Tittle?.replace(/ /g, '-').replace(/&/g, 'And')}`} className="w-full lg:h-[23%] py-8 flex flex-col gap-3 cards-Homepage cursor-pointer">
+                                        <div className="w-full flex justify-between">
+                                            <h1 className="w-5/6 text-2xl font-bold duration-300">{item.Tittle}</h1>
+                                            <h2 className="text-lg font-bold duration-300">${item.Price}</h2>
+                                        </div>
+                                        <p className="w-full lg:w-5/6 xl:w-[90%] text-[17px]">{item.Discription}</p>
+                                    </Link>
+                                ))
+                        ) : (
+                            <h1>!Soory,we dont have any products</h1>
+                        )}
                     </div>
                     <div className="w-full lg:w-[45%] h-[40vh] lg:h-full py-5">
                         <div className="w-full h-full background-image-size" id="signatures"></div>

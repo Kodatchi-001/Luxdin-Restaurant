@@ -2,6 +2,7 @@
 
 import { Shareinfo } from "@/context";
 import { BlogCardsTypes } from "@/types";
+import Link from "next/link";
 import { useContext } from "react";
 
 export default function Articles() {
@@ -13,7 +14,7 @@ export default function Articles() {
                 BlogCards
                     .slice(4, 5)
                     .map((item: BlogCardsTypes) => (
-                        <div key={item.id} className="w-full h-full flex flex-wrap gap-5 lg:gap-2 Card-blog cursor-pointer">
+                        <Link href={`/blog/${item.Tittle.replace(/ /g, '-').replace(/&/g, 'and').replace(/and/g, '&').replace(/:/g, '=').replace(/--+/g, '-')}`} key={item.id} className="w-full h-full flex flex-wrap gap-5 lg:gap-2 Card-blog cursor-pointer">
                             <div className="w-full h-[60vh] lg:h-5/6 flex justify-center pt-12 background-image-size" style={{ backgroundImage: `url(${item.Picture})` }}>
                                 <div>
                                     <h2 className="px-8 py-2 text-lg bg-[#fffdf8] duration-500">BLOG ARTICLES</h2>
@@ -26,7 +27,7 @@ export default function Articles() {
                                     <h3 className="px-6 border-l border-[#d1a374]">{item.Date}</h3>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))
             ) : (
                 <h1>!Sorry,we dont have any blog</h1>

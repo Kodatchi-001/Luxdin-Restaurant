@@ -17,6 +17,7 @@ export default function Articles({ Props }: PropsBlogdetailsType) {
     }, [BlogCards, Props.BlogTitle])
 
     return <>
+        <h1>{Props.BlogTitle}</h1>
         <section className="w-full h-full flex justify-center mt-10 lg:mt-20 mb-14 lg:mb-32">
             <div className="w-full 2xl:max-w-[1600px] h-full flex justify-between flex-wrap gap-14 lg:gap-0 px-5 xl:px-20 ">
                 {BlogDetails && BlogDetails.length > 0 ? (
@@ -36,7 +37,7 @@ export default function Articles({ Props }: PropsBlogdetailsType) {
                                     {item.Description_2 && item.Description_2.length > 0 ? (
                                         item.Description_2.map((items, index) => (
                                             <div key={index} className="flex flex-col gap-3">
-                                                <h1 className="text-xl font-bold text-[#6e5959]">{items.Text}</h1>
+                                                <h1 className="text-xl font-bold text-[#6e5959]">{items.Tittle_Text}</h1>
                                                 <p className="text-xl">{items.Text}</p>
                                             </div>
                                         ))

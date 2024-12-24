@@ -9,17 +9,17 @@ export default function ServicesHome() {
                     <h1 className="text-3xl lg:text-6xl">Our Dining Services</h1>
                 </div>
                 <div className="w-full h-3/4 flex justify-between sm:justify-center lg:justify-between items-center flex-wrap gap-5 lg:gap-0 p-2 lg:py-3">
-                    <Link href="/" className="w-full sm:w-[48.5%] lg:w-[31%] h-[45vh] lg:h-[70vh] 2xl:max-h-[500px] background-image-size flex items-end p-5" id="services-1">
+                    <Link href="/services" className="w-full sm:w-[48.5%] lg:w-[31%] h-[45vh] lg:h-[70vh] 2xl:max-h-[500px] background-image-size flex items-end p-5" id="services-1">
                         <div className="w-full py-5 text-center bg-[#fffdf8]">
                             <h1 className="text-2xl lg:text-xl xl:text-2xl">Fine Dining Experience</h1>
                         </div>
                     </Link>
-                    <Link href="/" className="w-full sm:w-[48.5%] lg:w-[31%] h-[45vh] lg:h-[70vh] 2xl:max-h-[500px] background-image-size flex items-end p-5" id="services-2">
+                    <Link href="/services" className="w-full sm:w-[48.5%] lg:w-[31%] h-[45vh] lg:h-[70vh] 2xl:max-h-[500px] background-image-size flex items-end p-5" id="services-2">
                         <div className="w-full py-5 text-center bg-[#fffdf8]">
                             <h1 className="text-2xl lg:text-xl xl:text-2xl">Private Dining Events</h1>
                         </div>
                     </Link>
-                    <Link href="/" className="w-full sm:w-[48.5%] lg:w-[31%] h-[45vh] lg:h-[70vh] 2xl:max-h-[500px] background-image-size flex items-end p-5" id="services-3">
+                    <Link href="/services" className="w-full sm:w-[48.5%] lg:w-[31%] h-[45vh] lg:h-[70vh] 2xl:max-h-[500px] background-image-size flex items-end p-5" id="services-3">
                         <div className="w-full py-5 text-center bg-[#fffdf8]">
                             <h1 className="text-2xl lg:text-xl xl:text-2xl">Food Catering Services</h1>
                         </div>

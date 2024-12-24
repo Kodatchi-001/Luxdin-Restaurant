@@ -10,6 +10,7 @@ const defaultValue: ShareinfoType = {
     FAQV2: [],
     BlogCards: [],
     ValuesCards: [],
+    Team: [],
     Menu: [],
     ShareCategories: null,
     setShareCategories: () => { },
@@ -37,7 +38,7 @@ export default function ShareProvider({ children }: { children: ReactNode }) {
     ]
 
     const BlogCards = [
-        { id: 0, Picture: 'https://framerusercontent.com/images/zzSwNdQkfHFovhgzFT2zpgFb8E.png', Tittle: 'The Art of Pairing : Elevating Your Dining Experience with Wine & Cuisine', Person: 'Januar Lestari', Date: '12 JAN 2024' },
+        { id: 0, Picture: 'https://framerusercontent.com/images/zzSwNdQkfHFovhgzFT2zpgFb8E.png', Tittle: 'The Art of Pairing : Elevating Your Dining Experience With Wine & Cuisine', Person: 'Januar Lestari', Date: '12 JAN 2024' },
         { id: 1, Picture: 'https://framerusercontent.com/images/oJYPn6QScLvAgmZgQSZQQCn6YQg.png', Tittle: 'Unveiling the Artistry: A Journey Through Our Restaurant Signature Hospitality', Person: 'Sonny Wilson', Date: '30 JUNE 2024' },
         { id: 2, Picture: 'https://framerusercontent.com/images/p0lBYw9xAyDrNv2ogOko0X51s64.png', Tittle: 'From Farm to Table: The Essence of Seasonal Cuisine in Fine Dining', Person: 'Alexander Roberts', Date: '14 JUNE 2024' },
         { id: 3, Picture: 'https://framerusercontent.com/images/gzsDiItyO89QwT3MCSGa2yfhAg.png?scale-down-to=512', Tittle: 'The Perfect Brunch: Elevating Morning Meals to a Luxurious Experience', Person: 'Olivia Sinclair', Date: '31 MAY 2024' },
@@ -49,6 +50,18 @@ export default function ShareProvider({ children }: { children: ReactNode }) {
         { id: 1, Tittle: 'Elegance', Discription: 'With a sophisticated ambiance and meticulous details exuding elegance, elevating dining to a luxurious affair that resonates with refinement.' },
         { id: 2, Tittle: 'Sustainability', Discription: 'We prioritize sustainability by sourcing ingre-dients responsibly and minimize environmental impact, ensuring that each dish is ethical.' },
         { id: 3, Tittle: 'Hospitality', Discription: 'Our dedicated team goes above and beyond to ensure every guest feels welcomed and heart cherished throughout their dining journey.' }
+    ]
+
+    const Team = [
+        { id: 0, Picture: 'https://framerusercontent.com/images/8MuFJojYy41hr0U8SS8FoyoJI.png', Name: 'Philippe LeBlanc', Job: 'CEO & Owner' },
+        { id: 1, Picture: 'https://framerusercontent.com/images/QNGvDPT19eI4BPXX0abIhp9I1M.png', Name: 'Rosaria Marine', Job: 'Head Sommelier' },
+        { id: 2, Picture: 'https://framerusercontent.com/images/MNTgQ6LYPVgCiVKfKsaterYgOhU.png', Name: 'Isabella Martinez', Job: 'Head Pastry Chef' },
+        { id: 3, Picture: 'https://framerusercontent.com/images/e1qLe6WOSas90kpXKRvvR5TDk.png', Name: 'John Smith', Job: 'Executive Chef' },
+        { id: 4, Picture: 'https://framerusercontent.com/images/sVXomOPeomZyguryqKaoGMctfI.png', Name: 'Sophia Nguyen', Job: 'Restaurant Manager' },
+        { id: 5, Picture: 'https://framerusercontent.com/images/lSnne0O0W3eivH9wK9PzHOvXCo.png', Name: 'David Johnson', Job: 'Head Pastry Chef' },
+        { id: 6, Picture: 'https://framerusercontent.com/images/TBiyhwDOX2NDF1caJtsaqxagLM.png', Name: 'Daniel Lee', Job: 'Head Chef de Cuisine' },
+        { id: 7, Picture: 'https://framerusercontent.com/images/AYHPhJe2wYjxiBuZyaS5JWgpyf4.png', Name: 'Olivia Smith', Job: 'Head Barista' },
+        { id: 8, Picture: 'https://framerusercontent.com/images/CK6il39492lHSqP6TsHDCN6kkY.png', Name: 'Mario Rodriguez', Job: 'Junior Chef' }
     ]
 
     const Menu = [
@@ -196,9 +209,9 @@ export default function ShareProvider({ children }: { children: ReactNode }) {
             Description: 'Whether youre at a Michelin-starred restaurant or enjoying a home-cooked meal with friends. The perfect combination of flavors can enhance the taste of both the food and the wine, creating a harmonious balance that tantalizes the taste buds. When it comes to pairing wine with cuisine, there are a few key principles to keep in mind. One of the most important factors is to consider the flavor profile of both the dish and the wine. For example, a bold, full-bodied red wine like Cabernet Sauvignon pairs well with rich, hearty dishes such as steak or braised lamb, while a crisp, acidic white wine like Sauvignon Blanc complements lighter fare like seafood or salads.',
             Picture: 'https://framerusercontent.com/images/jzhZGAGcZZks8wfJ332kY8kbIDs.png',
             Description_2: [
-                { Text: 'Texture is another important consideration when pairing wine with food. Wines with high levels of tannins, such as Cabernet Sauvignon or Syrah, pair well with dishes that have a rich, fatty texture, as the tannins help to cut through the richness and cleanse the palate. Conversely, lighter wines with softer tannins, such as Pinot Noir or Chardonnay, are better suited to dishes with a lighter texture, such as grilled chicken or pasta with a cream-based sauce.' },
-                { Text: 'In addition to considering the flavor and texture of the food and wine, its also important to think about the intensity of the flavors. A wine that is too overpowering can easily overwhelm the flavors of the food, while a wine that is too subtle may get lost in the mix. Aim for a balance of flavors that complement each other without overpowering one another.' },
-                { Text: 'Ultimately, the art of pairing wine with cuisine is about experimentation and discovery. Dont be afraid to try new combinations and trust your own palate to guide you. Whether youre dining out at a fancy restaurant or enjoying a meal at home, the right pairing can take your dining experience to the next level, leaving you with memories to savor long after the meal is over.' }
+                { Tittle_Text: 'A Symphony of Flavors', Text: 'Texture is another important consideration when pairing wine with food. Wines with high levels of tannins, such as Cabernet Sauvignon or Syrah, pair well with dishes that have a rich, fatty texture, as the tannins help to cut through the richness and cleanse the palate. Conversely, lighter wines with softer tannins, such as Pinot Noir or Chardonnay, are better suited to dishes with a lighter texture, such as grilled chicken or pasta with a cream-based sauce.' },
+                { Tittle_Text: 'A Symphony of Flavors', Text: 'In addition to considering the flavor and texture of the food and wine, its also important to think about the intensity of the flavors. A wine that is too overpowering can easily overwhelm the flavors of the food, while a wine that is too subtle may get lost in the mix. Aim for a balance of flavors that complement each other without overpowering one another.' },
+                { Tittle_Text: 'A Symphony of Flavors', Text: 'Ultimately, the art of pairing wine with cuisine is about experimentation and discovery. Dont be afraid to try new combinations and trust your own palate to guide you. Whether youre dining out at a fancy restaurant or enjoying a meal at home, the right pairing can take your dining experience to the next level, leaving you with memories to savor long after the meal is over.' }
             ],
             Person: 'When pairing wine with cuisine, aim for a balance of flavors that complement each other without overpowering one another.'
         },
@@ -250,6 +263,7 @@ export default function ShareProvider({ children }: { children: ReactNode }) {
         FAQV2,
         BlogCards,
         ValuesCards,
+        Team,
         Menu,
         ShareCategories,
         setShareCategories,

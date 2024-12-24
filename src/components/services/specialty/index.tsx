@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Specialty() {
     return <>
         <section className="w-full h-full flex justify-center mt-20">
@@ -13,9 +15,9 @@ export default function Specialty() {
                             Immerse yourself in an elegant ambiance and impeccable service,
                             elevating your dining experience to new heights.
                         </p>
-                        <button className="px-12 py-3 bg-[#d3a574] text-white rounded-full text-2xl">
+                        <Link href="/reservation" className="px-12 py-3 bg-[#d3a574] text-white rounded-full text-2xl">
                             Make Reservation
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

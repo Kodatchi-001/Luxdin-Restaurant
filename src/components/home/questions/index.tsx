@@ -9,7 +9,7 @@ export default function QuestionsHome() {
     const { FAQ } = useContext(Shareinfo);
     const [ChangeSize, setChangeSize] = useState<number | null>(null);
     const Change = (index: number) => setChangeSize((previndex: number | null) => previndex === index ? null : index);
-
+    
     return <>
         <section className="w-full h-full flex justify-center px-3 lg:px-8 xl:px-24 mt-14 lg:mt-8 2xl:mt-20">
             <div className="w-full 2xl:max-w-[1600px] flex flex-wrap gap-8">

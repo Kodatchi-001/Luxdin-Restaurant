@@ -1,37 +1,18 @@
 'use client'
 
-import GetMenuApi from "@/api/menu";
 import { Shareinfo } from "@/context";
 import { MenuTypes } from "@/types";
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
-import Loading from "../loading";
+import { useContext, useState } from "react";
 
 export default function MenuComponents() {
     const [Filter, setFilter] = useState<string>("All");
-    const [Menu, setMenu] = useState<MenuTypes[]>([]);
-    const [loading, setloading] = useState<boolean>(true)
-    const { ShareCategories, setShareCategories } = useContext(Shareinfo);
+    const { ShareCategories, setShareCategories, Menu } = useContext(Shareinfo);
 
     const FilterCards = (categorie: string): void => {
         setFilter(categorie);
         setShareCategories('')
     }
-
-    const GetMenu = async () => {
-        try {
-            const response = await GetMenuApi();
-            setMenu(response || [])
-        } catch (error) {
-            console.log(error)
-        } finally {
-            setloading(false)
-        }
-    }
-
-    useEffect(() => {
-        GetMenu()
-    }, [])
     return <>
         <section className="w-full h-full flex justify-center pt-24">
             <div className="w-full 2xl:max-w-[1600px] h-full flex flex-wrap gap-20">
@@ -68,28 +49,25 @@ export default function MenuComponents() {
                     </ul>
                 </div>
                 <div className="w-full h-auto flex justify-center items-center flex-wrap gap-3 xl:gap-8 px-3 xl:px-10">
-                    {loading ? (
-                        <Loading height={50}/>
-                    ) : (
-                        Menu && Menu.length > 0 ?
-                            Menu.filter((item: MenuTypes) => ShareCategories === '' ? Filter === "All" || item.Categorie === Filter : item.Categorie === ShareCategories).map(items => (
-                                <Link href={`/menu/${items.Tittle?.replace(/ /g, '-').replace(/&/g, 'And')}`} key={items.id} className="w-full sm:w-[48%] lg:w-[30%] lg:h-[78vh] 2xl:max-h-[600px] cursor-pointer card-menu">
-                                    <div className="w-full h-[35vh] lg:h-[55%] relative overflow-hidden">
-                                        <div className="w-full h-full background-image-size absolute duration-300" style={{ backgroundImage: `url(${items.Picture})` }}></div>
+                    {Menu && Menu.length > 0 ?
+                        Menu.filter((item: MenuTypes) => ShareCategories === '' ? Filter === "All" || item.Categorie === Filter : item.Categorie === ShareCategories).map(items => (
+                            <Link href={`/menu/${items.Tittle?.replace(/ /g, '-').replace(/&/g, 'And')}`} key={items.id} className="w-full sm:w-[48%] lg:w-[30%] lg:h-[78vh] 2xl:max-h-[600px] cursor-pointer card-menu">
+                                <div className="w-full h-[35vh] lg:h-[55%] relative overflow-hidden">
+                                    <div className="w-full h-full background-image-size absolute duration-300" style={{ backgroundImage: `url(${items.Picture})` }}></div>
+                                </div>
+                                <div className="w-full h-[45%] flex flex-col justify-between items-center gap-8 lg:gap-0 py-5 duration-300 border-x border-b border-[#00000032] card-menu-info">
+                                    <div className="flex flex-col justify-center items-center gap-3">
+                                        <h2 className="text-[22px] font-bold text-[#3931316a] duration-300">${items.Price}</h2>
+                                        <h1 className="text-xl font-semibold duration-300">{items.Tittle}</h1>
+                                        <p className="w-[90%] text-center text-[15px] lg:text-[17px] duration-300">{items.Discription}</p>
                                     </div>
-                                    <div className="w-full h-[45%] flex flex-col justify-between items-center gap-8 lg:gap-0 py-5 duration-300 border-x border-b border-[#00000032] card-menu-info">
-                                        <div className="flex flex-col justify-center items-center gap-3">
-                                            <h2 className="text-[22px] font-bold text-[#3931316a] duration-300">${items.Price}</h2>
-                                            <h1 className="text-xl font-semibold duration-300">{items.Tittle}</h1>
-                                            <p className="w-[90%] text-center text-[15px] lg:text-[17px] duration-300">{items.Discription}</p>
-                                        </div>
-                                        <div className="w-1/5 h-[0.1vh] bg-black duration-300"></div>
-                                    </div>
-                                </Link>
-                            )) : (
-                                <h1>!Sorry ,we dont have any product</h1>
-                            )
-                    )}
+                                    <div className="w-1/5 h-[0.1vh] bg-black duration-300"></div>
+                                </div>
+                            </Link>
+                        )) : (
+                            <h1>!Sorry ,we dont have any product</h1>
+                        )
+                    }
                 </div>
             </div>
         </section>

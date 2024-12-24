@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Favorite() {
     return <>
         <section className="w-full lg:h-screen 2xl:max-h-[800px] mt-20 flex flex-wrap">
@@ -11,7 +13,9 @@ export default function Favorite() {
                         private dining options, tailored to exceed your expectations.
                     </p>
                 </div>
-                <h1 className="px-10 py-3 bg-white text-black rounded-full text-xl hover:bg-[#d3a574] hover:text-white duration-500 cursor-pointer">Make Reservation</h1>
+                <Link href="/reservation" className="px-10 py-3 bg-white text-black rounded-full text-xl hover:bg-[#d3a574] hover:text-white duration-500 cursor-pointer">
+                    Make Reservation
+                </Link>
             </div>
         </section>
     </>
