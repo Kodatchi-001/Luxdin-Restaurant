@@ -17,7 +17,6 @@ export default function Articles({ Props }: PropsBlogdetailsType) {
     }, [BlogCards, Props.BlogTitle])
 
     return <>
-        <h1>{Props.BlogTitle}</h1>
         <section className="w-full h-full flex justify-center mt-10 lg:mt-20 mb-14 lg:mb-32">
             <div className="w-full 2xl:max-w-[1600px] h-full flex justify-between flex-wrap gap-14 lg:gap-0 px-5 xl:px-20 ">
                 {BlogDetails && BlogDetails.length > 0 ? (
