@@ -8,7 +8,7 @@ import { useContext, useEffect, useState } from "react";
 export default function Header() {
     const [NavbarSize, setNavbarSize] = useState<boolean>(false);
     const [ChangeColor, setChangeColor] = useState<string>('');
-    const { HoverNavbar, setHoverNavbar } = useContext(Shareinfo);
+    const { HoverNavbar, setHoverNavbar, Menu } = useContext(Shareinfo);
     const [Color, setColor] = useState<string>('');
     const Pathname = usePathname();
     /*------------------------*/
@@ -63,15 +63,20 @@ export default function Header() {
             default:
                 if (Pathname.startsWith('/blog')) {
                     setColor('Black')
-                } else {
+                }
+                else if (Pathname.startsWith('/menu')) {
+                    setChangeColor('menu-details');
+                }
+                else {
+                    setChangeColor('');
                     setColor('')
                 }
-                setChangeColor('');
         }
     }, [Pathname])
 
+
     return <>
-        <header className={`w-full flex justify-center absolute text-${Color} ${NavbarSize ? 'bg-[#fffdf8] xl:bg-transparent duration-300 shadow-xl' : ''}`}
+        <header className={`w-full flex justify-center absolute text-${Color} xl:bg-transparent z-50 ${NavbarSize ? 'shadow-xl bg-[#fffdf8] duration-300' : ''}`}
             onMouseLeave={() => setHoverNavbar?.(false)}>
             <div className="w-full 2xl:max-w-[1600px] h-full flex justify-between items-center flex-wrap px-6 xl:px-20 2xl:px-[90px]">
                 <div className="w-full xl:w-4/6 2xl:w-auto lg:h-[10vh] xl:h-full flex items-center py-6 sm:py-7">
@@ -97,11 +102,12 @@ export default function Header() {
                     </div>
                 </div>
                 <div className={`w-full h-[90%] flex flex-col justify-between items-center ${NavbarSize ? 'flex gap-5 lg:gap-0' : 'hidden'} xl:hidden`}>
-                    <div className="w-full h-1/2 flex flex-col gap-5">
+                    <div className="w-full h-1/2 flex flex-col items-center gap-5">
                         <h1 className="w-full text-center text-[#c17d00] text-xl">INNER PAGES</h1>
-                        <div className="text-xl lg:text-2xl bg-red-700w flex justify-between items-center flex-wrap pt-2 text-gray-600">
+                        <div className="text-xl lg:text-2xl bg-red-700w flex items-center flex-wrap pt-2 text-gray-600">
                             <Link href="/about" className={`w-1/3 text-center ${ChangeColor === 'about' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>About</Link>
                             <Link href="/menu" className={`w-1/3 text-center ${ChangeColor === 'menu' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Menu</Link>
+                            <Link href={`/menu/${Menu ? Menu[0].Tittle?.replace(/ /g, '-') : ''}`} className={`w-1/3 text-center ${ChangeColor === 'menu-details' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Menu details</Link>
                             <Link href="/services" className={`w-1/3 text-center ${ChangeColor === 'services' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Services</Link>
                             <Link href="/team" className={`w-1/3 text-center mt-3 ${ChangeColor === 'team' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Team</Link>
                             <Link href="/contact" className={`w-1/3 text-center mt-3 ${ChangeColor === 'contact' ? 'text-[#a46c32]' : ''}`} onClick={ChangeSize}>Contact</Link>

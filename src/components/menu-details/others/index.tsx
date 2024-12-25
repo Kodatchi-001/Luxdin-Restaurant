@@ -16,13 +16,13 @@ export default function Others({ Props }: PropsMenudetailsType) {
 
     return <>
         <section className={`w-full h-full mt-16 lg:mt-0 flex justify-center ${Menu.filter((item: MenuTypes) => item.Categorie === ProductsCategory).length > 1 ? 'flex' : 'hidden'}`}>
-            <div className="w-full 2xl:max-w-[1600px] h-full flex flex-wrap px-2 lg:px-5 xl:px-16 mt-10 lg:mt-0 lg:py-14 ">
+            <div className="w-full 2xl:max-w-[1600px] h-full flex flex-wrap px-2 lg:px-5 xl:px-16 mt-10 lg:mt-0 lg:py-14">
                 <div className="w-full h-full flex justify-between items-end flex-wrap pb-14 gap-5 lg:gap-0">
                     <div className="w-full lg:w-auto flex flex-col justify-center gap-3 lg:gap-5">
                         <h2 className="text-xl text-[#d1a374]">OTHERS</h2>
                         <h1 className="text-4xl lg:text-6xl">Related Menu</h1>
                     </div>
-                    <Link href="/menu" className="border border-[#d1a374] w-full lg:w-auto px-10 py-2 text-lg rounded-full text-[#d1a374] hover:bg-[#d1a374] hover:text-white duration-500">
+                    <Link href="/menu" className="border border-[#d1a374] w-full lg:w-auto text-center px-10 py-3 text-lg rounded-full text-[#d1a374] hover:bg-[#d1a374] hover:text-white duration-500">
                         See All Menu
                     </Link>
                 </div>

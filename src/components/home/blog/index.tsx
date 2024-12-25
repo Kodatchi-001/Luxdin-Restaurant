@@ -13,7 +13,7 @@ export default function BlogHome() {
                 BlogCards
                     .slice(0, 1)
                     .map((item: BlogCardsTypes) => (
-                        <Link key={item.id} href="/" className="w-full h-full flex flex-wrap gap-5 lg:gap-2 Card-blog cursor-pointer">
+                        <Link href={`/blog/${item.Tittle.replace(/ /g, '-').replace(/&/g, 'and').replace(/:/g, 'yes').replace(/--+/g, '-')}`} key={item.id} className="w-full h-full flex flex-wrap gap-5 lg:gap-2 Card-blog cursor-pointer">
                             <div className="w-full h-[60vh] lg:h-5/6 flex justify-center pt-12 bg-bottom bg-cover bg-no-repeat" style={{ backgroundImage: `url(${item.Picture})` }}>
                                 <div>
                                     <h2 className="px-8 py-2 text-lg bg-[#fffdf8] duration-500">BLOG ARTICLES</h2>

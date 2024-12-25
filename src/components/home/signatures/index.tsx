@@ -16,7 +16,7 @@ export default function SignaturesHome() {
                         <h2 className="text-xl text-[#d1a374]">SIGNATURES</h2>
                         <h1 className="text-3xl lg:text-6xl">Popular Delights</h1>
                     </div>
-                    <Link href="/" className="border border-[#d1a374] w-full text-center sm:w-auto px-10 py-3 lg:py-2 text-lg rounded-full text-[#d1a374] hover:bg-[#d1a374] hover:text-white duration-500">
+                    <Link href="/menu" className="border border-[#d1a374] w-full text-center sm:w-auto px-10 py-3 lg:py-2 text-lg rounded-full text-[#d1a374] hover:bg-[#d1a374] hover:text-white duration-500">
                         See All Menu
                     </Link>
                 </div>

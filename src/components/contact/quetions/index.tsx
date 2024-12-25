@@ -39,7 +39,7 @@ export default function Questions() {
                             <h1>Questions.</h1>
                         </div>
                     </div>
-                    <Link href="/about" className="border border-[#d1a374] text-center sm:w-auto px-10 py-2 lg:py-1 text-lg rounded-full text-[#d1a374] hover:bg-[#d1a374] hover:text-white duration-500">
+                    <Link href="/about" className="border border-[#d1a374] text-center sm:w-auto px-10 py-3 lg:py-1 text-lg rounded-full text-[#d1a374] hover:bg-[#d1a374] hover:text-white duration-500">
                         Learn More
                     </Link>
                 </div>

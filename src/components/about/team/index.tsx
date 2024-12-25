@@ -16,8 +16,8 @@ export default function Team() {
                         <h2 className="text-xl text-[#d1a374]">TEAM</h2>
                         <h1 className="text-3xl lg:text-6xl">Our Culinary Team</h1>
                     </div>
-                    <div>
-                        <Link href="/team" className="border border-[#d1a374] w-full lg:w-auto px-10 py-3 lg:py-2 text-lg rounded-full text-[#d1a374]">
+                    <div className="w-full flex">
+                        <Link href="/team" className="border border-[#d1a374] w-full lg:w-auto text-center px-10 py-3 lg:py-2 text-lg rounded-full text-[#d1a374]">
                             See All Teams
                         </Link>
                     </div>

@@ -10,7 +10,7 @@ export default function MainCourse({ Props }: PropsMenudetailsType) {
     const { Menu } = useContext(Shareinfo);
 
     return <>
-        <section className="w-full h-full flex justify-center py-8 lg:py-24 mt-16 lg:mt-0 bg-[#132d2d]">
+        <section className="w-full h-full flex justify-center py-8 lg:py-24 mt-5 lg:mt-0 bg-[#132d2d]">
             <div className="w-full 2xl:max-w-[1600px] h-full lg:h-auto">
                 {Menu
                     .filter((item: MenuTypes) => item.Tittle === Props.CardTittle)

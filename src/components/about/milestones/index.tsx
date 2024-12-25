@@ -6,7 +6,7 @@ export default function Milestones() {
                     <h2 className="text-xl text-[#d1a374]">MILESTONES</h2>
                     <h1 className="text-4xl lg:text-6xl">Our Journey</h1>
                 </div>
-                <div className="w-full h-[75%] flex justify-between sm:justify-center lg:justify-between items-center flex-wrap gap-8 sm:gap-14 lg:gap-0">
+                <div className="w-full h-[75%] flex justify-between sm:justify-center lg:justify-between items-center flex-wrap gap-8 sm:gap-14 lg:gap-0 pl-2 lg:pl-0">
                     <div className="w-full sm:w-1/3 lg:w-1/5 h-1/2 flex flex-col justify-center gap-4 pl-10 lg:mt-[-20vh] border-l-2 border-[#d3a474]">
                         <h1 className="text-[30px] lg:text-[38px] font-bold">2002</h1>
                         <p className="text-[17px] text-[#6e5959]">
