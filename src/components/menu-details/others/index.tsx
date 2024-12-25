@@ -30,7 +30,7 @@ export default function Others({ Props }: PropsMenudetailsType) {
                     {Menu && Menu.length > 0 ?
                         Menu.filter((item: MenuTypes) => item.Categorie === ProductsCategory && item.Tittle !== Props.CardTittle)
                             .map((item: MenuTypes) => (
-                                <Link href={`/menu/${item.Tittle?.replace(/ /g, '-').replace(/&/g, 'And')}`} key={item.id} className="w-full sm:w-[45%] lg:w-[23%] h-[50vh] lg:max-h-[400px] flex flex-wrap cursor-pointer hover:-mt-8 duration-500">
+                                <Link href={`/menu/${item.Tittle?.replace(/ /g, '-').replace(/&/g, 'And')}`} key={item.id} className="w-full sm:w-[45%] lg:w-[23%] h-[50vh] lg:max-h-[400px] flex flex-wrap cursor-pointer lg:hover:-mt-8 duration-500">
                                     <div className="w-full h-5/6 background-image-size" style={{ backgroundImage: `url(${item.Picture})` }}></div>
                                     <div className="w-full h-1/6 flex justify-between items-center text-xl lg:text-lg">
                                         <h1>{item.Tittle}</h1>

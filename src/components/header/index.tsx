@@ -81,7 +81,7 @@ export default function Header() {
             <div className="w-full 2xl:max-w-[1600px] h-full flex justify-between items-center flex-wrap px-6 xl:px-20 2xl:px-[90px]">
                 <div className="w-full xl:w-4/6 2xl:w-auto lg:h-[10vh] xl:h-full flex items-center py-6 sm:py-7">
                     <div className="w-1/2 lg:w-full h-full flex items-center gap-12">
-                        <Link href="/" onClick={() => setHoverNavbar?.(false)}>
+                        <Link href="/" onClick={() => { setHoverNavbar?.(false)}}>
                             <h1 className="text-2xl text-[#d1a374] font-bold cursor-pointer">LuxDin</h1>
                         </Link>
                         <ul className={`w-[45%] 2xl:w-auto xl:flex justify-around 2xl:gap-10 text-lg hidden text-${Color}`}>

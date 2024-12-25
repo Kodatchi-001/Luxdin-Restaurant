@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Reservation() {
     return <>
         <section className="w-full h-[50vh] lg:h-[80vh] 2xl:max-h-[1000px] flex justify-center mt-20 lg:mt-0 background-image-size"
@@ -8,7 +10,9 @@ export default function Reservation() {
                     Delve into the rich tapestry of
                     flavors with our special menu.
                 </h1>
-                <h1 className="lg:ml-auto px-10 py-4 text-xl rounded-full bg-white text-black hover:bg-[#8a6624] duration-500 hover:text-white cursor-pointer">Make Reservation</h1>
+                <Link href="/reservation" className="lg:ml-auto px-10 py-3 text-xl rounded-full bg-white text-black cursor-pointer">
+                    Make Reservation
+                </Link>
             </div>
         </section>
     </>
