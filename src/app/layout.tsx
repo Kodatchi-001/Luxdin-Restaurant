@@ -5,6 +5,7 @@ import NavbarDetails from "@/components/navbar-details";
 import ShareProvider from "@/context";
 import Footer from "@/components/footer";
 import ReduxProvider from "@/store/provider";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "LuxDin || Luxdin-Restaurant",
@@ -24,6 +25,7 @@ export default function RootLayout({
         <link rel="icon" href="/mandala.ico" />
       </head>
       <body>
+        <Analytics />
         <ShareProvider>
           <Header />
           <NavbarDetails />
